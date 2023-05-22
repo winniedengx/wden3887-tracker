@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Healthier Option</title>
-    <link rel="stylesheet" href="name.scss">
+    <link rel="stylesheet" href="main.scss">
 </head>
 <body>
   <script src="script.js"></script>
 
   <header>
-    <img src="Banner logo.png" alt="Banner" width="100%"
+    <img src="Banner logo.png" alt="Banner" width="100%">
   </header>
 
   <section>
@@ -19,7 +19,7 @@
         <div class="progress"></div>
     </div>
 
-    <div class="calendar"
+    <div class="calendar"></div>
     <div class="row">
         <div class="day">Day 1</div>
         <div class="meal-log" onclick="addMeal(this)"></div>
@@ -70,60 +70,144 @@
    <h1>Recommended Recipes </h1>
   </section>
 
+  <!-- onsubmit event of the form calls the handleSubmit function. This displays the information entered by users in the input fields  -->
+  <form onsubmit ="return handleSubmit()">
+<label>What's your name? </label>
+
+<!-- creating a single line text field -->
+<input type="text" id="myText"> <br><br>
+
+<!-- Creating a dropdown select option to track their intentions behind healthy eating -->
+<!-- https://www.w3schools.com/tags/tag_select.asp  -->
+<label for="option"> Why do you want to eat healthy?</label><br><br>
+<select name="option" id="option" required>
+  <option value=""> Select an option</option>
+  <option value="Option 1">Lose weight</option>
+  <option value="Option 2">Find ways to save time cooking</option>
+  <option value="Option 3">Look after my body</option>
+</select>
+<!-- <button type="button" id="myButton"> Submit</button> -->
+<input type="submit" value="Submit">
+</form>
+
+<!-- Submitted information will be displaed in the result element -->
+<div id="result"></div>
+
   <section>
     <h3>Want to Avoid</h3>
   </section>
 
+  <!-- https://www.w3schools.com/howto/howto_css_images_side_by_side.asp -->
+  <div class="row">
+  <div class="column">
   <div class="Glutenicon">
     <img src="Gluten.png" alt="Remove Gluten">
     <h4>Gluten</h4>
   </div>
+  </div>
 
-
+  <div class="column">
   <div class="Dairyicon">
-    <img src="Dairy.png" alt="Remove Dairy"
+    <img src="Dairy.png" alt="Remove Dairy">
     <h4>Dairy</h4>
   </div>
+  </div>
 
-
+<div class="column">
   <div class="Nutsicon"> 
-    <img src="Nuts.png" alt="Remove Nuts"
+    <img src="Nuts.png" alt="Remove Nuts">
     <h4>Nuts</h4>
   </div>
+  </div>
 
+  <div class="column">
   <div class="AddDietary"> 
-    <img src="Add Dietary.png" alt="Add Dietary Requirements icon"
+    <img src="Add Dietary.png" alt="Add Dietary Requirements icon">
+    <h4 class="white-text">Add Requirements icon</h4>
   </div>
-
-  <div>
-    <img src="Banana Oat Pancakes.png" alt="Banana Oat Pancakes" width="50%" 
-
   </div>
-
-    <img src="Chia Pudding.png" alt="Chia Pudding" width="50%"
-
-    <div>
-    <img src="Leak & Potato Soup.png" alt="Leak & Potato Soup" width="50%"
+  </div>
+  <div class="row">
+    <div class="column">
+    <!-- <div class="Glutenicon">
+      <img src="Gluten.png" alt="Remove Gluten">
+      <h4>Gluten</h4>
+    </div> -->
+    <div class="pancake-container" id="pancake-container">
+      <img src="Banana Oat Pancakes.png" alt="Banana Oat Pancakes" width="50%"> 
+      <h3> Banana Oat Pancakes</h3>
+    </div>
+    </div>
+  
+    <div class="column">
+      <div class="pancake-container">
+        <img src="Chia Pudding.png" alt="Chia Pudding" width="50%">
+        <h3> Chia Pudding</h3>
+    </div>
+    <!-- <div class="Dairyicon">
+      <img src="Dairy.png" alt="Remove Dairy">
+      <h4>Dairy</h4>
+    </div> -->
+    </div>
     </div>
 
+
+<!-- <div class="row-pancake-chia">
+  <div class="column-pancake-chia">
+  <div class="pancake-container">
+    <img src="Banana Oat Pancakes.png" alt="Banana Oat Pancakes" width="50%"> 
+    <h3> Banana Oat Pancakes</h3>
+  </div> -->
+<div class="pancake-popup-container">
+  <img src="Banana Oat Pancakes.png" alt="Banana Oat Pancakes">
+  </div>
+
+
+</div>
+</div>
+  </div>
+
+  <!-- <div class="column-pancake-chia"> -->
+    <!-- <img src="Chia Pudding.png" alt="Chia Pudding" width="50%"> -->
+
+</div>
     <div>
-        <img src="Roasted Squash & Couscous Salad.png" alt="Roasted Squash & Couscous Salad" width="50%"
+      </div>
+    
+      <div class="row">
+<div class="column">
+    <img src="Leak & Potato Soup.png" alt="Leak & Potato Soup" width="50%">
+    <h3>Leak & Potato Soup</h3>
+    </div>
+
+    <div class="column">
+        <img src="Roasted Squash & Couscous Salad.png" alt="Roasted Squash & Couscous Salad" width="50%">
+        <h3> Roasted Squash & Couscous Salad</h3>
+        </div>
         </div>
 
-        <div>
-            <img src="Lemon Pesto Gnocchi.png" alt="Lemon Pesto Pasta" width="50%"
-            </div>
+        <div class="row">
+          <div class="column">
+            <img src="Lemon Pesto Gnocchi.png" alt="Lemon Pesto Pasta" width="50%">
+            <h3> Lemon Pesto Gnocchi</h3>
+          </div>
 
-            <div>
-                <img src="Salmon Tacos.png" alt="Salmon Tacos" width="50%"
-                </div>
+            <div class="column"> 
+                <img src="Salmon Tacos.png" alt="Salmon Tacos" width="50%">
+                <h3>Salmon Tacos</h3>
+              </div>
+              </div>
 
-                <div>
-                    <img src="Raspberry Slice.png" alt="Raspberry Slice" width="50%"
-                    </div>
+                <div class="row">
+                  <div class="column">
+                    <img src="Raspberry Slice.png" alt="Raspberry Slice" width="50%">
+                    <h3>Raspberry Slice</h3>
+                  </div>
             
-                    <div>
-                        <img src="Carrot Cake Bliss Balls.png" alt="Carrot Cake Bliss Balls" width="50%"
+                    <div class="column">
+                        <img src="Carrot Cake Bliss Balls.png" alt="Carrot Cake Bliss Balls" width="50%">
+                       <h3>Carrot Cake Bliss Balls</h3>
+                      </div>
                         </div>
 
  

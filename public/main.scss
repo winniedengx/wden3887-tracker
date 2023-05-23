@@ -1,0 +1,133 @@
+#one {
+    margin: 2px;
+}
+
+#one:hover {
+    background-color:#cccccc;
+}
+
+#two {
+    margin: 2px;
+}
+
+#three {
+    margin: 2px;
+}
+
+#four {
+    margin: 2px;
+}
+
+#five {
+    margin: 2px;
+}
+
+#six {
+    margin: 2px;
+}
+
+#seven {
+    margin: 2px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.Glutenicon {
+    text-align: center;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+
+.progress-bar {
+    width: 200px; 
+    height: 20px; 
+    background-color: #F2D2BD;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color:#C1E1C1;
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: row;
+}
+
+.row {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.day {
+    width: 100px;
+}
+
+.meal-entry {
+    width: 20px;
+    height: 20px;
+    background-color: #C1E1C1;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 5%; 
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: grid;
+}
+
+.pancake-container {
+    position: relative;
+}
+
+.pancake-popup-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: #F2D2BD;
+}
+
+.column-pancake-chia {
+    float: left;
+    width: 50%;
+    padding: 1%;
+}
+
+.row-pancake-chia::after {
+    content: "";
+    clear: both;
+    display: flex; 
+}
+
+.white-text{
+    color: white;
+}
+

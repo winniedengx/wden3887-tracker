@@ -131,3 +131,37 @@ img {
     color: white;
 }
 
+.meal-tracker {
+    background: #F2D2BD;
+    padding: 5%;
+    margin: 10%;
+    border-radius: 5%;
+}
+
+.done-button {
+    background-color: #C1E1C1;
+}
+
+.pancake-popup {
+    background: #F2D2BD;
+    padding: 5%;
+    margin: 10%;
+    border-radius: 5%;
+}
+
+.pancake-popup img {
+    display: block;
+    width: 33%;
+}
+
+.pancake-popup h3{
+    background-color: #C1E1C1;
+    padding: 3%;
+
+}
+
+.pancake-popup button{
+    background-color: #C1E1C1;
+    border-radius: 5px;
+    text-align: right;
+}

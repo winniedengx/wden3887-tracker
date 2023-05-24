@@ -26,22 +26,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //    console.log("Hey",myName);
 
-function handleSubmit() {
+// function handleSubmit() {
 
-    // Receiving user input from the forms
-    var name= document.getElementById("name").value;
-    var option = document.getElementById("Option").value;
+//     // Receiving user input from the forms
+//     var name= document.getElementById("name").value;
+//     var option = document.getElementById("Option").value;
 
-    // Display submitted information
-    var result= document.getElementById("result");
-    result.innerHTML = "Name: " + name + "<br>Option: " + option;
+//     // Display submitted information
+//     var result= document.getElementById("result");
+//     result.innerHTML = "Name: " + name + "<br>Option: " + option;
 
-//   Prevent the form from submitting and refreshing the page
-    return false;
+// //   Prevent the form from submitting and refreshing the page
+//     return false;
 
-}
 
 function handleClick(box) {
     box.style.backgroundColor= "blue";
     box.innerHTML= "Clicked!";
 }
+
+
+function addMeal() {
+    // Receiving user input for the meal, ingredient ane calories field
+var meal = document.getElementById("meal").value;
+var Ingredients = document.getElementById("Ingredients").value;
+var calories = document.getElementById("calories").value;
+
+// Creating a new table row whenever new data is put through by the user
+var table = document.getElementById("mealTable");
+var row = table.insertRow(-1);
+
+// Insert cells for meal, calories and Ingredients 
+var mealCell = row.insertCell (0);
+mealCell.innerHTML = meal; 
+
+var caloriesCell = row.insertCell(1);
+caloriesCell.innerHTML = calories; 
+
+varIngredientsCell = row.insertCell(2);
+caloriesCell.innerHTML = Ingredients;
+
+// Clearing input fields 
+document.getElementById("meal").value = "";
+document.getElementById("calories").value = "";
+}
+

@@ -68,13 +68,16 @@
 
     <div class="calendar">
     <div id="one" style="width: 14%; height:100px; background-color: #C1E1C1;"></div>
-    <div id="two" style="width: 14%; height:100px; background-color: #C1E1C1;"></div>
-    <div id="three" style="width: 14%; height:100px; background-color: #C1E1C1;"></div>
-    <div id="four" style="width: 14%; height:100px; background-color: #C1E1C1;"></div>
-    <div id="five" style="width: 14%; height:100px; background-color: #C1E1C1;"></div>
-    <div id="six" style="width: 14%; height:100px; background-color: #C1E1C1;"></div>
-    <div id="seven" style="width: 14%; height:100px; background-color: #C1E1C1;"></div>
+    <div id="two" style="width: 14%; height:100px; background-color: #E6E6E6;"></div>
+    <div id="three" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
+    <div id="four" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
+    <div id="five" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
+    <div id="six" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
+    <div id="seven" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
     </div>
+
+    <img src="History.png" alt="View history icon"> <h4> Show Past History</h4>
+
   </section>
 
   <section>
@@ -90,22 +93,22 @@
 
 <!-- Creating a dropdown select option to track their intentions behind healthy eating -->
 <!-- https://www.w3schools.com/tags/tag_select.asp  -->
-<label for="option"> Why do you want to eat healthy?</label><br><br>
+<!-- <label for="option"> Why do you want to eat healthy?</label><br><br>
 <select name="option" id="option" required>
   <option value=""> Select an option</option>
   <option value="Option 1">Lose weight</option>
   <option value="Option 2">Find ways to save time cooking</option>
   <option value="Option 3">Look after my body</option>
 </select>
-<!-- <button type="button" id="myButton"> Submit</button> -->
-<input type="submit" value="Submit">
-</form>
+ <button type="button" id="myButton"> Submit</button> -->
+<!-- <input type="submit" value="Submit">
+</form> --> 
 
 <!-- Submitted information will be displaed in the result element -->
 <div id="result"></div>
 
   <section>
-    <h3>Want to Avoid</h3>
+    <h3>What to avoid</h3>
   </section>
 
   <!-- https://www.w3schools.com/howto/howto_css_images_side_by_side.asp -->
@@ -131,12 +134,12 @@
   </div>
   </div>
 
-  <div class="column">
+  <!-- <div class="column">
   <div class="AddDietary"> 
     <img src="Add Dietary.png" alt="Add Dietary Requirements icon">
     <h4 class="white-text">Add Requirements icon</h4>
   </div>
-  </div>
+  </div> -->
   </div>
   <div class="row">
     <div class="column">
@@ -221,7 +224,58 @@
                       </div>
                         </div>
 
- 
+ <div class="meal-tracker">
+  <h3 style="color:white"> Day One </h3>
+  <label for="meal">Meal:</label>
+  <input type="text" id="meak" placeholder="Enter meal" required><br><br>
+  <label for="Ingredients">Ingredients:</label>
+  <input type="text" id="Ingredients" placeholder="Enter Ingredients" required><br><br>
+
+
+  <label for="calories">Calories:</label>
+  <input type="number" id="calories" placeholder="Enter calories" required><br><br>
+
+  <div class="done-button">
+  <button onclick="addMeal()"><img src="Done.png">Done</button>
+</div>
+
+  <table id="mealTable">
+    <tr>
+        <th>Meal</th>
+        <th>Calories</th>
+    </tr>
+</table>
+</div>
+
+<div class="pancake-popup">
+  <button>I ate this today!</button>
+  <img src="Banana Oat Pancakes.png">
+  <h3> Banana Oat Pancakes</h3>
+  <h3> Ingredients</h3>
+  <p>
+    1 bananas <br><br>
+    1 eggs <br><br>
+    1/4 cup rolled oats <br><br>
+    1/4 teaspoon baking powder <br><br>
+    Pinch of salt <br><br>
+    Maple syrup to serve (optional) <br><br>
+    Fresh fruit of your choice to serve <br><br>
+  </p>
+
+  <h3> Method</h3>
+  
+1. In a blender, combine the peeled banana, eggs, oats, baking powder and salt.<br>
+
+2. Allow to blend until the mixture is as smooth as you want it and blended well. Allow the batter to stand for 10-20 minutes until thickened slightly. <br>
+
+3. Heat a non-stick frying pan over medium heat. <br>
+
+4. Fry spoonfuls of the batter until golden brown on both sides. <br>
+
+5. Serve with a drizzle of maple syrup and fresh fruit of your choice. <br>
+
+  <h3> Nutrient Values</h3>
+</div>
 
 </body>
 </html>

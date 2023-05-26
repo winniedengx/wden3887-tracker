@@ -1,3 +1,23 @@
+var weeklyGoal;
+var totalCalories = 0;
+
+function setWeeklyGoal() {
+    weeklyGoal = parseInt(document.getElementById("goal").value);
+    updateProgressBar();
+}
+
+function addCalories() {
+    var calories = parseInt(document.getElementById("calories").value);
+    totalCalories += calories;
+    document.getElementById("calories").value = "";
+    updateProgressBar();
+}
+
+function updateProgressBar() {
+    var progress = (totalCalories / weeklyGoal) * 100;
+    progress = Math.min(progress, 100); // Ensure the progress does not exceed 100%
+    document.getElementById("progress").style.width = progress + "%";
+}
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -69,5 +89,17 @@ caloriesCell.innerHTML = Ingredients;
 // Clearing input fields 
 document.getElementById("meal").value = "";
 document.getElementById("calories").value = "";
+}
+
+function openPopup() {
+    var overlay = document.getElementById("pancake-popup");
+    overlay.style.visibility = "visible"; 
+    overlay.style.opacity = 1;
+}
+
+function closePopup() {
+    var overlay = document.getElementById("pancake-popup");
+    overlay.style.visibility = "hidden";
+    overlay.style.opacity = 0;
 }
 

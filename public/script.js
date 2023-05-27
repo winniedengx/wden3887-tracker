@@ -103,3 +103,38 @@ function closePopup() {
     overlay.style.opacity = 0;
 }
 
+function opensaladPopup() {
+    var overlay = document.getElementById("salad-popup");
+    overlay.style.visibility = "visible"; 
+    overlay.style.opacity = 1;
+}
+
+function closesaladPopup() {
+    var overlay = document.getElementById("salad-popup");
+    overlay.style.visibility = "hidden";
+    overlay.style.opacity = 0;
+}
+
+function opensalmonPopup() {
+    var overlay = document.getElementById("salmon-popup");
+    overlay.style.visibility = "visible"; 
+    overlay.style.opacity = 1;
+}
+
+function closesalmonPopup() {
+    var overlay = document.getElementById("salmon-popup");
+    overlay.style.visibility = "hidden";
+    overlay.style.opacity = 0;
+}
+
+function openraspberryPopup() {
+    var overlay = document.getElementById("raspberry-popup");
+    overlay.style.visibility = "visible"; 
+    overlay.style.opacity = 1;
+}
+
+function closeraspberryPopup() {
+    var overlay = document.getElementById("raspberry-popup");
+    overlay.style.visibility = "hidden";
+    overlay.style.opacity = 0;
+}

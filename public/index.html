@@ -46,8 +46,13 @@
     <div id="seven" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
     </div>
 
-    <img src="History.png" alt="View history icon"> <h4> Show Past History</h4>
+  </section>
 
+  <section>
+
+    <div class="history">
+  <img src="History.png" alt="View history icon"> <h4> Show Past History</h4>
+  </div>
   </section>
 
   <section>
@@ -117,15 +122,16 @@
 
 <section>
   <div class="row">
-    <div class="column"></div>
+    <div class="column">
     <button onclick="openPopup()"> <div class="food-container" id="food-container"> 
       <img src="Banana Oat Pancakes.png" alt="Banana Oat Pancakes" width="50%"> 
       <h3> Banana Oat Pancakes</h3>
     </div>
+  </div>
   </button>
 
   <div class="column">
-    <div class="food-container">
+    <button onclick="opensaladPopup()"> <div class="food-container" id="food-container"> 
       <img src="Roasted Squash & Couscous Salad.png" alt="Roasted Squash & Couscous Salad" width="50%">
       <h3> Roasted Squash & Couscous Salad</h3>
       </div>
@@ -134,10 +140,13 @@
 
 <div id="popup-overlay" class="popup-overlay">
 <div id="pancake-popup">
+    <div class="popup-buttons">
   <button>I ate this today!</button>
-  <span class="close button" onclick="closePopup()"><img src="Exit.png"> </span>
-  <img src="Banana Oat Pancakes.png" style="max-width: 33%;">
-  <h2 class="Banana-title"> Banana Oat <br> Pancakes</h3>
+  <span class="close button" onclick="closePopup()">
+   <img id="exit" src="Exit.png"> </span>
+   </div>
+  <img class="pancakeimg" src="Banana Oat Pancakes.png" style="max-width: 33%;">
+  <h2 class="Banana-title"> Banana Oat <br> Pancakes</h2>
   <h3> Ingredients</h3>
   <p>
     1 bananas <br><br>
@@ -160,17 +169,41 @@
   <h3> Nutrient Values</h3>
   <div class="nutritional-values">
 <p class="pancake-calorie">245kcal</p>
+<div class="row">
+  <div class="column">
 <h4 class="nurtients">Protein</h4>
+</div>
+<div class="column">
 <h4 class="nutrient-values">9g</h4>
+</div>
+</div>
 <img src="Protein1.png" alt="Protein value scale">
+<div class="row">
+  <div class="column">
 <h4 class="nurtients">Carbs</h4>
+</div>
+<div class="column">
 <h4 class="nutrient-values">41g</h4>
+</div>
+</div>
 <img src="Carb1.png" alt="Carb value scale">
+<div class="row">
+  <div class="column">
 <h4 class="nurtients">Fat</h4>
+</div>
+<div class="column">
 <h4 class="nutrient-values">1g</h4>
+</div>
+</div>
 <img src="Fat1.png" alt="Carb value scale">
+<div class="row">
+  <div class="column">
 <h4 class="nurtients">Fiber</h4>
+</div>
+<div class="column">
 <h4 class="nutrient-values">5g</h4>
+</div>
+</div>
 <img src="Fiber1.png" alt="Fiber value scale">
 </div>
 </div>
@@ -179,21 +212,265 @@
 
 </div>
 
+<div id="popup-overlay" class="popup-overlay">
+  <div id="salad-popup">
+    <div class="popup-buttons">
+    <button>I ate this today!</button>
+    <span class="close button" onclick="closesaladPopup()">
+      <img id="exit" src="Exit.png"> </span>
+      </div>
+    <img src="Roasted Squash & Couscous Salad.png" style="max-width: 33%;">
+    <h2>Roasted Squash & <br> Couscous Salad </h2>
+    <h3> Ingredients</h3>
+    <p>
+      1/4  butternut squash <br><br>
+      1/4  fresh green chilli <br><br>
+      1/4  tablespoon cumin seeds <br><br>
+      1/4 teaspoon baking powder <br><br>
+      1 sprig of fresh thyme <br><br>
+      Olive oil <br><br>
+      25 g couscous <br><br>
+      1/2  tablespoons pumpkin seeds <br><br>
+      Squeeze of a lemon<br><br>
+    </p>
+  
+    <h3> Method</h3>
+    
+<strong> 1. </strong>Preheat the oven to 190ºC/375°F.<br>
+<strong>2.</strong> Peel and chop the squash into large chunks, finely chop the chilli, then place into a roasting dish. <br>
+<strong>3.</strong> Scatter over the cumin seeds and thyme sprigs, then toss together with oil. Season with sea salt and roast for 45 to 50 minutes, or until cooked and lightly golden, turning halfway. <br>
+<strong>4.</strong> Place the couscous in a bowl and pour over enough boiling water to sit 1cm above the couscous. Cover the bowl and leave for 10 minutes. <br>
+<strong>5.</strong> Toast the pumpkin seeds in a dry frying pan. <br>
+<strong>6.</strong> Uncover and fluff the couscous with a fork, stir in the lemon zest and juice, the roasted squash and 1/8 tablespoons of oil. Serve scattered with the pumpkin.<br>
+  
+    <h3> Nutrient Values</h3>
+    <div class="nutritional-values">
+  <p class="pancake-calorie">266kcal</p>
+  <div class="row">
+    <div class="column">
+  <h4 class="nurtients">Protein</h4>
+  </div>
+  <div class="column">
+  <h4 class="nutrient-values">6g</h4>
+  </div>
+  </div>
+  <img src="Protein2.png" alt="Protein value scale">
+  <div class="row">
+    <div class="column">
+  <h4 class="nurtients">Carbs</h4>
+  </div>
+  <div class="column">
+  <h4 class="nutrient-values">34.7g</h4>
+  </div>
+  </div>
+  <img src="Carb2.png" alt="Carb value scale">
+  <div class="row">
+    <div class="column">
+  <h4 class="nurtients">Fat</h4>
+  </div>
+  <div class="column">
+  <h4 class="nutrient-values">13.2g</h4>
+  </div>
+  </div>
+  <img src="Fat2.png" alt="Carb value scale">
+  <div class="row">
+    <div class="column">
+  <h4 class="nurtients">Fiber</h4>
+  </div>
+  <div class="column">
+  <h4 class="nutrient-values">4.7g</h4>
+  </div>
+  </div>
+  <img src="Fiber2.png" alt="Fiber value scale">
+  </div>
+  </div>
+    </div>
+    </div>
+  
+  </div>
+  
+
 <div class="row">
     <div class="column"> 
-      <div class="food-container">
+      <button onclick="opensalmonPopup()"> <div class="food-container" id="food-container"> 
         <img src="Salmon Tacos.png" alt="Salmon Tacos" width="50%">
         <h3>Salmon Tacos</h3>
       </div>
       </div>
 
+  
+
       <div class="column">
-        <div class="food-container">
+        <button onclick="openraspberryPopup()"> <div class="food-container" id="food-container"> 
         <img src="Raspberry Slice.png" alt="Raspberry Slice" width="50%">
         <h3>Raspberry Slice</h3>
       </div>
       </div>
       </div>
+
+      <div id="popup-overlay" class="popup-overlay">
+        <div id="salmon-popup">
+          <div class="popup-buttons">
+          <button>I ate this today!</button>
+          <span class="close button" onclick="closesalmonPopup()">
+            <img id="exit" src="Exit.png"> </span>
+            </div>
+          <img src="Salmon Tacos.png" style="max-width: 33%;">
+          <h2>Salmon Tacos </h2>
+          <h3> Ingredients</h3>
+
+          <p>
+            125 g salmon fillets, skin on, from sustainable sources <br><br>
+            1 teaspoons five spice powder <br><br>
+            Olive oil <br><br>
+            Pinch of fresh coriander <br><br>
+            Pinch of fresh mint <br><br>
+            150 g plain fat-free yoghurt <br><br>
+            1/4 cucumber <br><br>
+            1/8 shallot <br><br>
+            1/4 fresh red chilli<br><br>
+            1/4 tablespoon white wine vinegar<br><br>
+            1/4 pinch of sugar<br><br>
+            1 corn or flour tortillas<br><br>
+          </p>
+        
+          <h3> Method</h3>
+          
+        1. Rub the salmon flesh (but not the skin) with the five spice, a drizzle of oil and a good pinch of sea salt and black pepper.<br>
+        2. Heat a non-stick frying pan over a medium heat and place the salmon skin-side down in the pan and cook for 8 to 9 minutes or until nearly cooked through and the skin is crispy. <br>
+        3. Flip them over, immediately remove from the heat and allow to finish cooking through in the residual heat.<br>
+        4. Save a few coriander sprigs to one side, then pick and finely chop the remaining coriander and the mint leaves. Combine with the yoghurt, and season to taste.<br>
+        5. Using a speed-peeler, peel the cucumber into ribbons and place in a bowl. Peel and finely slice the shallots and chilli, then add to the bowl. Sprinkle over the vinegar, sugar and a pinch of salt, and mix with your hands to combine the flavours. <br>
+        6. Place a tortilla on each plate and flake over the salmon fillets, including any crispy skin. Add a dollop of the herby yoghurt, the minty cucumber (squeezing out any liquid) and pick over the reserved coriander leaves. Roll up and enjoy.<br>
+        
+          <h3> Nutrient Values</h3>
+          <div class="nutritional-values">
+        <p class="pancake-calorie">452kcal</p>
+        <div class="row">
+          <div class="column">
+        <h4 class="nurtients">Protein</h4>
+        </div>
+        <div class="column">
+        <h4 class="nutrient-values">33.6g</h4>
+        </div>
+        </div>
+        <img src="Protein3.png" alt="Protein value scale">
+        <div class="row">
+          <div class="column">
+        <h4 class="nurtients">Carbs</h4>
+        </div>
+        <div class="column">
+        <h4 class="nutrient-values">44.6g</h4>
+        </div>
+        </div>
+        <img src="Carb3.png" alt="Carb value scale">
+        <div class="row">
+          <div class="column">
+        <h4 class="nurtients">Fat</h4>
+        </div>
+        <div class="column">
+        <h4 class="nutrient-values">16.5g</h4>
+        </div>
+        </div>
+        <img src="Fat3.png" alt="Carb value scale">
+        <div class="row">
+          <div class="column">
+        <h4 class="nurtients">Fiber</h4>
+        </div>
+        <div class="column">
+        <h4 class="nutrient-values">2.4g</h4>
+        </div>
+        </div>
+        <img src="Fiber3.png" alt="Fiber value scale">
+        </div>
+        </div>
+          </div>
+          </div>
+        
+        </div>
+        
+        <div id="popup-overlay" class="popup-overlay">
+          <div id="raspberry-popup">
+            <div class="popup-buttons">
+            <button>I ate this today!</button>
+            <span class="close button" onclick="closeraspberryPopup()">
+              <img id="exit" src="Exit.png"> </span>
+              </div>
+            <img src="Raspberry Slice.png" style="max-width: 33%;">
+            <h2>Raspberry Slice </h2>
+            <h3> Ingredients</h3>
+  
+            <p>
+              1 1/2 cups self-raising flour <br><br>
+              1/3 cup Stevia sweet granules <br><br>
+              1 1/2 tsp baking powder <br><br>
+              1 cup no-added-sugar French vanilla yoghurt <br><br>
+              1/3 cup rice malt syrup <br><br>
+              1/3 cup rice bran oil <br><br>
+              1 egg, lightly beaten <br><br>
+              125g fresh raspberries <br><br>
+              3 x 45g bars sugar-free orange-flavoured dark chocolate, melted<br><br>
+            </p>
+          
+            <h3> Method</h3>
+            
+          1. Preheat oven to 180C/160C fan-forced. Grease and line an 18cm x 28cm slice pan with baking paper extending paper 5cm above long sides.<br>
+          2. Combine flour, Stevia and baking powder in a large bowl. <br>
+          3. Stir in yoghurt, syrup, oil and egg. Fold in half the raspberries. Pour into prepared pan. Level top. <br>
+          4. Sprinkle over remaining raspberries, pushing gently into batter. <br>
+          5. Bake for 30 minutes or until a skewer inserted into the centre comes out clean. <br>
+          6. Stand in pan for 10 minutes, transfer to a wire rack to cool. Drizzle with chocolate. Serve.<br>
+          
+            <h3> Nutrient Values</h3>
+            <div class="nutritional-values">
+          <p class="pancake-calorie">220kcal</p>
+          <div class="row">
+            <div class="column">
+          <h4 class="nurtients">Protein</h4>
+          </div>
+          <div class="column">
+          <h4 class="nutrient-values">4.4g</h4>
+          </div>
+          </div>
+          <img src="Protein4.png" alt="Protein value scale">
+          <div class="row">
+            <div class="column">
+          <h4 class="nurtients">Carbs</h4>
+          </div>
+          <div class="column">
+          <h4 class="nutrient-values">35.7g</h4>
+          </div>
+          </div>
+          <img src="Carb4.png" alt="Carb value scale">
+          <div class="row">
+            <div class="column">
+          <h4 class="nurtients">Fat</h4>
+          </div>
+          <div class="column">
+          <h4 class="nutrient-values">11g</h4>
+          </div>
+          </div>
+          <img src="Fat4.png" alt="Carb value scale">
+          <div class="row">
+            <div class="column">
+          <h4 class="nurtients">Fiber</h4>
+          </div>
+          <div class="column">
+          <h4 class="nutrient-values">2.3g</h4>
+          </div>
+          </div>
+          <img src="Fiber4.png" alt="Fiber value scale">
+          </div>
+          </div>
+            </div>
+            </div>
+          
+          </div>
+          
+  
+  
+
+
   </section>
    
         <!-- <img src="Chia Pudding.png" alt="Chia Pudding" width="50%">

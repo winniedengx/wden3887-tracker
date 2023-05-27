@@ -83,7 +83,15 @@ img {
     align-items: center;
 }
 
+.history {
+    display: flex;
+}
 
+
+.history img{
+    margin-left: auto;
+    margin-right: 0;
+}
 
 // .progress-bar {
 //     width: 200px; 
@@ -147,17 +155,17 @@ img {
     background-color: #F2D2BD;
 }
 
-.column-pancake-chia {
-    float: left;
-    width: 50%;
-    padding: 1%;
-}
+// .column-pancake-chia {
+//     float: left;
+//     width: 50%;
+//     padding: 1%;
+// }
 
-.row-pancake-chia::after {
-    content: "";
-    clear: both;
-    display: flex; 
-}
+// .row-pancake-chia::after {
+//     content: "";
+//     clear: both;
+//     display: flex; 
+// }
 
 .white-text{
     color: white;
@@ -201,8 +209,7 @@ img {
     border-radius: 5%;
 }
 
-
-#pancake-popup img {
+.pancakeimg {
     display: block;
     width: 33%;
 }
@@ -216,7 +223,12 @@ img {
 #pancake-popup button{
     background-color: #C1E1C1;
     border-radius: 5px;
-    justify-content: right;
+    margin-right:auto;
+    margin-left:0;
+}
+
+.pancake-calorie {
+    text-align:center;
 }
 
 .close-button {
@@ -227,4 +239,102 @@ img {
 
 .nutritional-values img{
     width: 80%;
+}
+
+#salad-popup {
+    display: hidden;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+    background: #F2D2BD;
+    padding: 5%;
+    margin: 10%;
+    border-radius: 5%;
+}
+
+#salad-popup button {
+    background-color: #C1E1C1;
+    border-radius: 5px;
+    margin-right:auto;
+    margin-left:0;
+}
+
+#salad-popup h3{
+    background-color: #C1E1C1;
+    padding: 3%;
+
+}
+
+#salad-popup h2 {
+    text-align: center;
+}
+
+#exit {
+    width:20px;
+    margin: 0;
+}
+
+.popup-buttons {
+    display: flex;
+}
+
+#salmon-popup {
+    display: hidden;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+    background: #F2D2BD;
+    padding: 5%;
+    margin: 10%;
+    border-radius: 5%;
+}
+
+#salmon-popup button {
+    background-color: #C1E1C1;
+    border-radius: 5px;
+    margin-right:auto;
+    margin-left:0;
+}
+
+#salmon-popup h3{
+    background-color: #C1E1C1;
+    padding: 3%;
+
+}
+
+#salmon-popup h2 {
+    text-align: center;
+}
+#raspberry-popup {
+    display: hidden;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+    background: #F2D2BD;
+    padding: 5%;
+    margin: 10%;
+    border-radius: 5%;
+}
+
+#raspberry-popup button {
+    background-color: #C1E1C1;
+    border-radius: 5px;
+    margin-right:auto;
+    margin-left:0;
+}
+
+#raspberry-popup h3{
+    background-color: #C1E1C1;
+    padding: 3%;
+
+}
+
+#raspberry-popup h2 {
+    text-align: center;
 }

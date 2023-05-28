@@ -25,37 +25,50 @@
     margin-left: 10px;
 }
 
-#one {
-    margin: 2px;
-}
+.box {
+    width: 14%;
+    height: 100px;
+    background-color: #F2D2BD;
+    margin: 0 2px;
+    cursor: pointer;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
 
-#one:hover {
-    background-color:#cccccc;
-}
+// #one {
+//     margin: 2px;
+// }
 
-#two {
-    margin: 2px;
-}
+// #one:hover {
+//     background-color:#cccccc;
+// }
 
-#three {
-    margin: 2px;
-}
+// #two {
+//     margin: 2px;
+// }
 
-#four {
-    margin: 2px;
-}
+// #three {
+//     margin: 2px;
+// }
 
-#five {
-    margin: 2px;
-}
+// #four {
+//     margin: 2px;
+// }
 
-#six {
-    margin: 2px;
-}
+// #five {
+//     margin: 2px;
+// }
 
-#seven {
-    margin: 2px;
-}
+// #six {
+//     margin: 2px;
+// }
+
+// #seven {
+//     margin: 2px;
+// }
 
 h1 {
     text-align: center;
@@ -143,29 +156,32 @@ img {
     display: grid;
 }
 
-.pancake-container {
-    position: relative;
-}
-
-.pancake-popup-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    background-color: #F2D2BD;
-}
-
-// .column-pancake-chia {
-//     float: left;
-//     width: 50%;
-//     padding: 1%;
+// #popup-overlay {
+//     // position: fixed;
+//     // top: 0; 
+//     // left: 0;
+//     // width: 100%;
+//     // height: 100%;
+//     display: block;
+//     justify-content: center;
+//     align-items: center;
+//     visibility: hidden;
+//     opacity: 50;
+//     transition: visibility 0s, opacity 0.3s;
 // }
 
-// .row-pancake-chia::after {
-//     content: "";
-//     clear: both;
-//     display: flex; 
+// .pancake-container {
+//     position: relative;
 // }
+
+// .pancake-popup-container {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     display: none;
+//     background-color: #F2D2BD;
+// }
+
 
 .white-text{
     color: white;
@@ -182,25 +198,12 @@ img {
     background-color: #C1E1C1;
 }
 
-// popup-overlay {
-//     position: fixed;
-//     top: 0; 
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     visibility: hidden;
-//     opacity: 0;
-//     transition: visibility 0s, opacity 0.3s;
-// }
 
-#pancake-popup {
-    display: hidden;
+#popupContent {
+    display: none;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
+    // visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.3s;
     background: #F2D2BD;
@@ -214,13 +217,13 @@ img {
     width: 33%;
 }
 
-#pancake-popup h3{
+#popupContent h3{
     background-color: #C1E1C1;
     padding: 3%;
 
 }
 
-#pancake-popup button{
+#popupContent button{
     background-color: #C1E1C1;
     border-radius: 5px;
     margin-right:auto;
@@ -338,3 +341,4 @@ img {
 #raspberry-popup h2 {
     text-align: center;
 }
+

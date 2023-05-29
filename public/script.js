@@ -121,60 +121,28 @@ document.getElementById("calories").value = "";
 //   overlay.style.opacity = 0;
 // });
 
-const openPopupButton = document.getElementById("pancake-popup");
-const popupContent = document.getElementById("pancake-popup");
+//POP UP CODE STARTS HERE
+function openPopUp(id) {
+    var overlay = document.getElementById(id);
+    console.log(overlay.style);
+    overlay.style.display = "block";
 
-openPopupButton.addEventListener('click', function() {
-    popupContent.this.style.display = 'block';
-});
-
-closePopupButton.addEventListener('click',function() {
-    popupContent.style.display = 'none';
-});
-
-//     function closePopup() {
-//             var overlay = document.getElementById("popupContent");
-//             overlay.style.visibility = "hidden";
-//             overlay.style.opacity = 0;
-//         }
-
-// });
-
-function opensaladPopup() {
-    var overlay = document.getElementById("salad-popup");
-    overlay.style.visibility = "visible"; 
-    overlay.style.opacity = 1;
+    var foods = document.getElementById("foods");
+    foods.style.display = "none";
 }
 
-function closesaladPopup() {
-    var overlay = document.getElementById("salad-popup");
-    overlay.style.visibility = "hidden";
-    overlay.style.opacity = 0;
+
+function closePopUps(){
+    var overlays = document.getElementsByClassName("popup-overlay");
+    for (let i =0; i < overlays.length; i++){
+        const element = overlays[1];
+        element.style.display = "none";
+    }
+
+var foods = document.getElementById("foods");
+foods.style.display = "flex";
 }
 
-function opensalmonPopup() {
-    var overlay = document.getElementById("salmon-popup");
-    overlay.style.visibility = "visible"; 
-    overlay.style.opacity = 1;
-}
-
-function closesalmonPopup() {
-    var overlay = document.getElementById("salmon-popup");
-    overlay.style.visibility = "hidden";
-    overlay.style.opacity = 0;
-}
-
-function openraspberryPopup() {
-    var overlay = document.getElementById("raspberry-popup");
-    overlay.style.visibility = "visible"; 
-    overlay.style.opacity = 1;
-}
-
-function closeraspberryPopup() {
-    var overlay = document.getElementById("raspberry-popup");
-    overlay.style.visibility = "hidden";
-    overlay.style.opacity = 0;
-}
 
 var activeBox = one; // Keep track of the active box
 
@@ -185,6 +153,8 @@ function openPopup(one) {
     activeBox++; // Increment the active box
   }
 }
+
+//CODE FOR TRACKING MEALS
 
 // Storage Controller
 const StorageCtrl = (function(){

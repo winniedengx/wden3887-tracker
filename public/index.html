@@ -9,11 +9,6 @@
 </head>
 <body>
   <script src="script.js"></script>
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>    
 
   <header>
     <img src="Banner logo.png" alt="Banner" width="100%">
@@ -61,36 +56,60 @@
       <div id="seven" class="box" onclick="openPopup(7)"></div>
     </div>
     
-
+<br>
   </section>
 
   <div class="container">
 <div class="card">
 <div class="card-content">
-<span class="card-title">Day 1</span>
+  <h3 style="color:white"> Day One </h3>
 <form class="col">
 <div class="row">
 <div class="input-field col s6">
+  <label for="item-name">Breakfast</label> <br>
 <input type="text" placeholder="Add Item" id="item-name">
-<label for="item-name">Meal</label>
 </div>
+<br>
 <div class="input-field col s6">
+  <!-- <label for="item-calories">Calories</label> -->
   <input type="number" placeholder="Add Calories" id="item-calories">
-  <label for="item-calories">Calories</label>
 </div>
-<button class="add-btn btn blue darken-3"><i class="fa fa-plus"></i>Add meal</button>
+</div>
+<div class="row">
+<div class="input-field col s6">
+  <label for="item-name">Lunch</label><br>
+<input type="text" placeholder="Add Item" id="item-name">
+</div>
+<br>
+<div class="input-field col s6">
+  <!-- <label for="item-calories">Calories</label> -->
+  <input type="number" placeholder="Add Calories" id="item-calories">
+</div>
+</div>
+<div class="row">
+<div class="input-field col s6">
+  <label for="item-name">Dinner</label><br>
+<input type="text" placeholder="Add Item" id="item-name">
+</div>
+<br>
+<div class="input-field col s6">
+  <!-- <label for="item-calories">Calories</label> -->
+  <input type="number" placeholder="Add Calories" id="item-calories">
+</div>
+</div>
+</div>
+<button class="add-btn btn blue darken-3"><i class="fa fa-plus"></i>Log meals</button>
 <button class="update-btn btn orange"><i class="fa fa-pencil-square-o"></i> Update Meal</button>
 <button class="delete-btn btn red"><i class="fa fa-remove"></i> Delete Meal</button>
 
 </div>
 
 </div>
-
 </form>
 
 </div>
-
 </div>
+
 
     <!-- Calorie Count -->
     <h3 class="center-align">Total Calories: <span class="total-calories">0</span></h3>
@@ -112,29 +131,39 @@
 
 
 <section>
-  <!-- <div class="row">
-    <div class="column">
-    <button onclick="openPopup()"> <div class="food-container" id="food-container"> 
-      <img src="Banana Oat Pancakes.png" alt="Banana Oat Pancakes" width="50%"> 
-      <h3> Banana Oat Pancakes</h3>
-    </div>
-  </div>
-  </button> -->
 
-  <div class="row">
-<div class="column">
-  <!-- <div id="popupContent" class="popup"> -->
-    <button id="openPopup">
-  <img src="Banana Oat Pancakes.png" alt="Banana Oat Pancakes" width="50%"> 
-      <h3> Banana Oat Pancakes</h3>
+
+  <div class="foods" id="foods">
+
+<button onclick="openPopUp('pancake-popup')">
+<img src="Banana Oat Pancakes.png" alt="Banana Oat Pancakes"> 
+<h3> Banana Oat Pancakes</h3>
+</button>
+
+<button onclick="openPopUp('salad-popup')">
+  <img src="Roasted Squash & Couscous Salad.png" alt="Roasted Squash & Couscous Salad">
+  <h3> Roasted Squash & Couscous Salad</h3>
+  </button>
+
+<button onclick="openPopUp('salmon-popup')">
+  <img src="Salmon Tacos.png" alt="Salmon Tacos">
+  <h3> Salmon Tacos</h3>
+  </button>
+
+  <button onclick="openPopUp('raspberry-popup')">
+    <img src="Raspberry Slice.png" alt="Raspberry Slice">
+    <h3>Raspberry Slice</h3>
     </button>
+
   </div>
-    <div id="popupContent">
-    <div id="pancake-popup">
+
+
+
+    <div id="pancake-popup" class="popup-overlay">
         <div class="popup-buttons">
       <button>I ate this today!</button>
-      <button class="close button" onclick="closePopup()">
-       <img id="exit" src="Exit.png"> </button>
+      <span class="close button" onclick="closePopUps()">
+        <img id="exit" src="Exit.png"> </span>
        </div>
       <img class="pancakeimg" src="Banana Oat Pancakes.png" style="max-width: 33%;">
       <h2 class="Banana-title"> Banana Oat <br> Pancakes</h2>
@@ -196,45 +225,34 @@
     </div>
     </div>
     <img src="Fiber1.png" alt="Fiber value scale">
-    </div>
-    </div>
-      </div>
-      </div>
-    
-    </div>
-  </div>
   </div>
 </div>
+  </div>
+  </div>
 
-  <div class="column">
-    <button onclick="opensaladPopup()"> <div class="food-container" id="food-container"> 
-      <img src="Roasted Squash & Couscous Salad.png" alt="Roasted Squash & Couscous Salad" width="50%">
-      <h3> Roasted Squash & Couscous Salad</h3>
-      </div>
-      </div>
-      </div>
+</div>
+  
 
-<div id="popup-overlay" class="popup-overlay">
-  <div id="salad-popup">
+<div id="salad-popup" class="popup-overlay">
     <div class="popup-buttons">
     <button>I ate this today!</button>
-    <span class="close button" onclick="closesaladPopup()">
+    <span class="close button" onclick="closePopUps()">
       <img id="exit" src="Exit.png"> </span>
       </div>
     <img src="Roasted Squash & Couscous Salad.png" style="max-width: 33%;">
     <h2>Roasted Squash & <br> Couscous Salad </h2>
     <h3> Ingredients</h3>
-    <p>
-      1/4  butternut squash <br><br>
-      1/4  fresh green chilli <br><br>
-      1/4  tablespoon cumin seeds <br><br>
-      1/4 teaspoon baking powder <br><br>
-      1 sprig of fresh thyme <br><br>
-      Olive oil <br><br>
-      25 g couscous <br><br>
-      1/2  tablespoons pumpkin seeds <br><br>
-      Squeeze of a lemon<br><br>
-    </p>
+    <ul>
+      <li>1/4  butternut squash </li>
+     <li>1/4  fresh green chilli </li>
+      <li>1/4  tablespoon cumin seeds </li>
+      <li>1/4 teaspoon baking powder </li>
+      <li>1 sprig of fresh thyme </li>
+      <li>Olive oil </li>
+      <li>25 g couscous </li>
+      <li>1/2  tablespoons pumpkin seeds </li>
+      <li>Squeeze of a lemon</li>
+    </ul>
   
     <h3> Method</h3>
     
@@ -290,61 +308,40 @@
     </div>
   
   </div>
-  
 
-<div class="row">
-    <div class="column"> 
-      <button onclick="opensalmonPopup()"> <div class="food-container" id="food-container"> 
-        <img src="Salmon Tacos.png" alt="Salmon Tacos" width="50%">
-        <h3>Salmon Tacos</h3>
-      </div>
-      </div>
 
-  
-
-      <div class="column">
-        <button onclick="openraspberryPopup()"> 
-          <div class="food-container" id="food-container"> 
-          <img src="Raspberry Slice.png" alt="Raspberry Slice" width="50%">
-        <h3>Raspberry Slice</h3>
-      </button>
-      </div>
-      </div>
-
-      <div id="popup-overlay" class="popup-overlay">
-        <div id="salmon-popup">
+      <div id="salmon-popup" class="popup-overlay">
           <div class="popup-buttons">
           <button>I ate this today!</button>
-          <span class="close button" onclick="closesalmonPopup()">
+          <span class="close button" onclick="closePopUps()">
             <img id="exit" src="Exit.png"> </span>
             </div>
           <img src="Salmon Tacos.png" style="max-width: 33%;">
           <h2>Salmon Tacos </h2>
           <h3> Ingredients</h3>
-
-          <p>
-            125 g salmon fillets, skin on, from sustainable sources <br><br>
-            1 teaspoons five spice powder <br><br>
-            Olive oil <br><br>
-            Pinch of fresh coriander <br><br>
-            Pinch of fresh mint <br><br>
-            150 g plain fat-free yoghurt <br><br>
-            1/4 cucumber <br><br>
-            1/8 shallot <br><br>
-            1/4 fresh red chilli<br><br>
-            1/4 tablespoon white wine vinegar<br><br>
-            1/4 pinch of sugar<br><br>
-            1 corn or flour tortillas<br><br>
-          </p>
+<ul>
+        <li>125 g salmon fillets, skin on, from sustainable sources </li>
+        <li>1 teaspoons five spice powder </li>
+        <li> Olive oil </li>
+        <li>Pinch of fresh coriander </li>
+        <li>Pinch of fresh mint </li>
+        <li>150 g plain fat-free yoghurt </li>
+        <li>1/4 cucumber </li>
+        <li>1/8 shallot </li>
+        <li>1/4 fresh red chilli</li>
+        <li>1/4 tablespoon white wine vinegar</li>
+        <li>1/4 pinch of sugar</li>
+          <li>1 corn or flour tortillas</li>
+</ul>
         
           <h3> Method</h3>
-          
-        1. Rub the salmon flesh (but not the skin) with the five spice, a drizzle of oil and a good pinch of sea salt and black pepper.<br>
-        2. Heat a non-stick frying pan over a medium heat and place the salmon skin-side down in the pan and cook for 8 to 9 minutes or until nearly cooked through and the skin is crispy. <br>
-        3. Flip them over, immediately remove from the heat and allow to finish cooking through in the residual heat.<br>
-        4. Save a few coriander sprigs to one side, then pick and finely chop the remaining coriander and the mint leaves. Combine with the yoghurt, and season to taste.<br>
-        5. Using a speed-peeler, peel the cucumber into ribbons and place in a bowl. Peel and finely slice the shallots and chilli, then add to the bowl. Sprinkle over the vinegar, sugar and a pinch of salt, and mix with your hands to combine the flavours. <br>
-        6. Place a tortilla on each plate and flake over the salmon fillets, including any crispy skin. Add a dollop of the herby yoghurt, the minty cucumber (squeezing out any liquid) and pick over the reserved coriander leaves. Roll up and enjoy.<br>
+       <ol type="1">
+      <li>Rub the salmon flesh (but not the skin) with the five spice, a drizzle of oil and a good pinch of sea salt and black pepper.</li>
+      <li>Heat a non-stick frying pan over a medium heat and place the salmon skin-side down in the pan and cook for 8 to 9 minutes or until nearly cooked through and the skin is crispy. </li>
+      <li>Flip them over, immediately remove from the heat and allow to finish cooking through in the residual heat.</li>
+      <li>Save a few coriander sprigs to one side, then pick and finely chop the remaining coriander and the mint leaves. Combine with the yoghurt, and season to taste.</li>
+      <li>Using a speed-peeler, peel the cucumber into ribbons and place in a bowl. Peel and finely slice the shallots and chilli, then add to the bowl. Sprinkle over the vinegar, sugar and a pinch of salt, and mix with your hands to combine the flavours.</li>
+      <li>Place a tortilla on each plate and flake over the salmon fillets, including any crispy skin. Add a dollop of the herby yoghurt, the minty cucumber (squeezing out any liquid) and pick over the reserved coriander leaves. Roll up and enjoy.</li>
         
           <h3> Nutrient Values</h3>
           <div class="nutritional-values">
@@ -385,45 +382,44 @@
         </div>
         </div>
         <img src="Fiber3.png" alt="Fiber value scale">
-        </div>
-        </div>
-          </div>
-          </div>
+
+      </div>
+    </div>
+      </div>
+      </div>
+    </div>
         
-        </div>
-        
-        <div id="popup-overlay" class="popup-overlay">
-          <div id="raspberry-popup">
+      <div id="raspberry-popup" class="popup-overlay">
             <div class="popup-buttons">
             <button>I ate this today!</button>
-            <span class="close button" onclick="closeraspberryPopup()">
+            <span class="close button" onclick="closePopUps()">
               <img id="exit" src="Exit.png"> </span>
               </div>
             <img src="Raspberry Slice.png" style="max-width: 33%;">
             <h2>Raspberry Slice </h2>
             <h3> Ingredients</h3>
   
-            <p>
-              1 1/2 cups self-raising flour <br><br>
-              1/3 cup Stevia sweet granules <br><br>
-              1 1/2 tsp baking powder <br><br>
-              1 cup no-added-sugar French vanilla yoghurt <br><br>
-              1/3 cup rice malt syrup <br><br>
-              1/3 cup rice bran oil <br><br>
-              1 egg, lightly beaten <br><br>
-              125g fresh raspberries <br><br>
-              3 x 45g bars sugar-free orange-flavoured dark chocolate, melted<br><br>
-            </p>
+            <ul>
+             <li>1 1/2 cups self-raising flour</li>
+              <li>1/3 cup Stevia sweet granules </li>
+             <li>1 1/2 tsp baking powder </li>
+            <li>1 cup no-added-sugar French vanilla yoghurt </li>
+              <li>1/3 cup rice malt syrup </li>
+              <li>1/3 cup rice bran oil </li>
+              <li>1 egg, lightly beaten </li>
+              <li>125g fresh raspberries </li>
+              <li>3 x 45g bars sugar-free orange-flavoured dark chocolate, melted</li>
+            </ul>
           
             <h3> Method</h3>
-            
-          1. Preheat oven to 180C/160C fan-forced. Grease and line an 18cm x 28cm slice pan with baking paper extending paper 5cm above long sides.<br>
-          2. Combine flour, Stevia and baking powder in a large bowl. <br>
-          3. Stir in yoghurt, syrup, oil and egg. Fold in half the raspberries. Pour into prepared pan. Level top. <br>
-          4. Sprinkle over remaining raspberries, pushing gently into batter. <br>
-          5. Bake for 30 minutes or until a skewer inserted into the centre comes out clean. <br>
-          6. Stand in pan for 10 minutes, transfer to a wire rack to cool. Drizzle with chocolate. Serve.<br>
-          
+            <ol type="1">
+          <li>Preheat oven to 180C/160C fan-forced. Grease and line an 18cm x 28cm slice pan with baking paper extending paper 5cm above long sides.</li>
+          <li>Combine flour, Stevia and baking powder in a large bowl.</li>
+          <li>Stir in yoghurt, syrup, oil and egg. Fold in half the raspberries. Pour into prepared pan. Level top. </li>
+          <li>Sprinkle over remaining raspberries, pushing gently into batter. </li>
+          <li>Bake for 30 minutes or until a skewer inserted into the centre comes out clean. </li>
+          <li>Stand in pan for 10 minutes, transfer to a wire rack to cool. Drizzle with chocolate. Serve.</li>
+          </ol>
             <h3> Nutrient Values</h3>
             <div class="nutritional-values">
           <p class="pancake-calorie">220kcal</p>
@@ -471,67 +467,10 @@
           </div>
           
   
-  
-
 
   </section>
    
-        <!-- <img src="Chia Pudding.png" alt="Chia Pudding" width="50%">
-        <h3> Chia Pudding</h3> -->
-  
-    <!-- <div class="Dairyicon">
-      <img src="Dairy.png" alt="Remove Dairy">
-      <h4>Dairy</h4>
-    </div> -->
-  
-<!-- <div class="row-pancake-chia">
-  <div class="column-pancake-chia">
-  <div class="pancake-container">
-    <img src="Banana Oat Pancakes.png" alt="Banana Oat Pancakes" width="50%"> 
-    <h3> Banana Oat Pancakes</h3>
-  </div> -->
-<!-- <div class="pancake-popup-container">
-  <img src="Banana Oat Pancakes.png" alt="Banana Oat Pancakes">
-  </div> -->
-
-
-<!-- </div>
-</div>
-  </div> -->
-
-  <!-- <div class="column-pancake-chia"> -->
-    <!-- <img src="Chia Pudding.png" alt="Chia Pudding" width="50%"> -->
-
-<!-- </div>
-    <div>
-      </div> -->
-    
-      <!-- <div class="row">
-<div class="column">
-    <img src="Leak & Potato Soup.png" alt="Leak & Potato Soup" width="50%">
-    <h3>Leak & Potato Soup</h3>
-    </div> -->
-
-    <!-- <div class="column">
-        <img src="Roasted Squash & Couscous Salad.png" alt="Roasted Squash & Couscous Salad" width="50%">
-        <h3> Roasted Squash & Couscous Salad</h3>
-        </div>
-        </div> -->
-
-        <!-- <div class="row">
-          <div class="column">
-            <img src="Lemon Pesto Gnocchi.png" alt="Lemon Pesto Pasta" width="50%">
-            <h3> Lemon Pesto Gnocchi</h3>
-          </div> -->
-
-          
-            
-                    <!-- <div class="column">
-                        <img src="Carrot Cake Bliss Balls.png" alt="Carrot Cake Bliss Balls" width="50%">
-                       <h3>Carrot Cake Bliss Balls</h3>
-                      </div>
-                        </div> -->
-
+      
  <section>
 
                   <div class="meal-tracker">

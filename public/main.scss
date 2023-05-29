@@ -87,9 +87,7 @@ h4 {
     text-align: center;
 }
 
-.Glutenicon {
-    text-align: center;
-}
+
 img {
     display: block;
     margin: 0 auto;
@@ -144,6 +142,24 @@ img {
     cursor: pointer;
 }
 
+.card {
+    background-color: #F2D2BD;
+    padding: 5%;
+    margin: 5%;
+    border-radius: 5%;
+}
+
+.card-title {
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.card-content {
+    justify-content: center;
+
+}
+
 .column {
     float: left;
     width: 25%;
@@ -156,31 +172,39 @@ img {
     display: grid;
 }
 
-// #popup-overlay {
-//     // position: fixed;
-//     // top: 0; 
-//     // left: 0;
-//     // width: 100%;
-//     // height: 100%;
-//     display: block;
-//     justify-content: center;
-//     align-items: center;
-//     visibility: hidden;
-//     opacity: 50;
-//     transition: visibility 0s, opacity 0.3s;
-// }
+.foods {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-// .pancake-container {
-//     position: relative;
-// }
+.foods > button {
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+}
 
-// .pancake-popup-container {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     display: none;
-//     background-color: #F2D2BD;
-// }
+.foods > button > img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    box-sizing: content-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+.popup-overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #F2D2BD;
+    padding: 20px;
+    margin: 10%;
+    border-radius: 20px;
+}
 
 
 .white-text{
@@ -199,12 +223,10 @@ img {
 }
 
 
-#popupContent {
+#pancake-popup {
     display: none;
     justify-content: center;
     align-items: center;
-    // visibility: hidden;
-    opacity: 0;
     transition: visibility 0s, opacity 0.3s;
     background: #F2D2BD;
     padding: 5%;
@@ -212,23 +234,17 @@ img {
     border-radius: 5%;
 }
 
-.pancakeimg {
-    display: block;
-    width: 33%;
-}
+// .pancakeimg {
+//     display: block;
+//     width: 33%;
+// }
 
-#popupContent h3{
+#pancake-popup h3{
     background-color: #C1E1C1;
     padding: 3%;
 
 }
 
-#popupContent button{
-    background-color: #C1E1C1;
-    border-radius: 5px;
-    margin-right:auto;
-    margin-left:0;
-}
 
 .pancake-calorie {
     text-align:center;
@@ -245,11 +261,9 @@ img {
 }
 
 #salad-popup {
-    display: hidden;
+    display: none;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
-    opacity: 0;
     transition: visibility 0s, opacity 0.3s;
     background: #F2D2BD;
     padding: 5%;
@@ -284,11 +298,9 @@ img {
 }
 
 #salmon-popup {
-    display: hidden;
+    display: none;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
-    opacity: 0;
     transition: visibility 0s, opacity 0.3s;
     background: #F2D2BD;
     padding: 5%;
@@ -312,12 +324,11 @@ img {
 #salmon-popup h2 {
     text-align: center;
 }
+
 #raspberry-popup {
-    display: hidden;
+    display: none;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
-    opacity: 0;
     transition: visibility 0s, opacity 0.3s;
     background: #F2D2BD;
     padding: 5%;

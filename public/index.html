@@ -36,25 +36,12 @@
   <section>
     <h3>Track your Healthy Eating</h3>
 
-    <!-- <div class="calendar">
-    <div id="one" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
-    <div id="two" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
-    <div id="three" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
-    <div id="four" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
-    <div id="five" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
-    <div id="six" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
-    <div id="seven" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
-    </div> -->
+    <div class="row-flower">
+      <img src="Leaf1.png" class="leaf-one">
+      <img src="Leaf2.png" class="leaf-two">
+      </div>
 
-    <!-- <div class="calendar" id="calendar">
-      <div id="one" class="box" onclick="openPopup(one)"></div>
-      <div id="two" class="box" onclick="openPopup(2)"></div>
-      <div id="three" class="box" onclick="openPopup(3)"></div>
-      <div id="four" class="box" onclick="openPopup(4)"></div>
-      <div id="five" class="box" onclick="openPopup(5)"></div>
-      <div id="six" class="box" onclick="openPopup(6)"></div>
-      <div id="seven" class="box" onclick="openPopup(7)"></div>
-    </div> -->
+
     
     <div class="calender" id="calendar">
 
@@ -89,6 +76,21 @@
 
 
 <br>
+
+<div id="history" class="history">
+  <button onclick="openhistoryPopUps('historycontent')">
+    <div class="history-row">
+<img src="History.png" alt="View history icon"> <br> <h4> Show Past History</h4>
+</div>
+</button>
+</div>
+
+<div id="historycontent" class="historycontent">
+<span class="close button" onclick="closehistoryPopUps()">
+  <img id="exit" src="Exit.png"> </span>
+<h3> Past History</h3>
+
+</div>
   </section>
 
   <div id="card" class="container">
@@ -153,20 +155,8 @@
     </ul>
   </div>
 
-  <section>
-    <div id="history" class="history">
-      <button onclick="openHistory('historycontent')">
-  <img src="History.png" alt="View history icon"> <h4> Show Past History</h4>
-  </button>
-  </div>
 
-  <div id="historycontent" class="historycontent">
-<h3> Past History</h3>
-<span class="close button" onclick="closehistoryPopUps()">
-  <img id="exit" src="Exit.png"> </span>
-
-  </div>
-  </section>
+  <br> 
 
   <section>
    <h1>Recommended Recipes </h1>

@@ -98,15 +98,15 @@ img {
     align-items: center;
 }
 
-.history {
-    display: flex;
-}
+// .history {
+//     display: flex;
+// }
 
 
-.history img{
-    margin-left: auto;
-    margin-right: 0;
-}
+// .history img{
+//     margin-left: auto;
+//     margin-right: 0;
+// }
 
 // .progress-bar {
 //     width: 200px; 
@@ -125,6 +125,8 @@ img {
 #calendar {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    z-index: 1;
 }
 
 .calender button {
@@ -144,6 +146,20 @@ img {
     justify-content: center;
 }
 
+.row-flower {
+    display: flex
+}
+
+.leaf-one {
+    width: 200px;
+    margin-left:0;
+    margin-right: auto;
+}
+
+.leaf-two {
+    width: 100px;
+}
+
 .day {
     width: 100px;
 }
@@ -161,10 +177,17 @@ img {
     padding: 5%;
     margin: 5%;
     border-radius: 20px;
+    display: none;
 }
 
 #historycontent h3{
     color: white
+}
+
+#history {
+    position: absolute;
+    right: 0px;
+    margin: 5%;
 }
 
 #history button {
@@ -172,6 +195,13 @@ img {
     border: none;
 }
 
+.history-row {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;
+    justify-content: center;
+
+}
 
 #card {
     background-color: #F2D2BD;

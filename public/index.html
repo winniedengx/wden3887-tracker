@@ -46,7 +46,7 @@
     <div id="seven" style="width: 14%; height:100px; background-color: #F2D2BD;"></div>
     </div> -->
 
-    <div class="calendar">
+    <!-- <div class="calendar" id="calendar">
       <div id="one" class="box" onclick="openPopup(one)"></div>
       <div id="two" class="box" onclick="openPopup(2)"></div>
       <div id="three" class="box" onclick="openPopup(3)"></div>
@@ -54,15 +54,48 @@
       <div id="five" class="box" onclick="openPopup(5)"></div>
       <div id="six" class="box" onclick="openPopup(6)"></div>
       <div id="seven" class="box" onclick="openPopup(7)"></div>
-    </div>
+    </div> -->
     
+    <div class="calender" id="calendar">
+
+<button onclick="openMeal('card')">
+<div id="one" class="box">Day 1 </div>
+</button>
+
+<button onclick="openMeal('card')">
+  <div id="two" class="box">Day 2 </div>
+  </button>
+
+  <button onclick="openMeal('card')">
+    <div id="three" class="box">Day 3</div>
+    </button>
+
+    <button onclick="openMeal('card')">
+      <div id="four" class="box">Day 4</div>
+      </button>
+
+      <button onclick="openMeal('card')">
+        <div id="five" class="box">Day 5</div>
+        </button>
+
+        <button onclick="openMeal('card')">
+          <div id="six" class="box">Day 6</div>
+          </button>
+
+          <button onclick="openMeal('card')">
+            <div id="seven" class="box">Day 7</div>
+            </button>
+    </div>
+
+
 <br>
   </section>
 
-  <div class="container">
-<div class="card">
+  <div id="card" class="container">
 <div class="card-content">
-  <h3 style="color:white"> Day One </h3>
+  <span class="close button" onclick="closecalenderPopUps()">
+    <img id="exit" src="Exit.png"> </span>
+  <h3 style="color:white"> Meals </h3>
 <form class="col">
 <div class="row">
 <div class="input-field col s6">
@@ -75,33 +108,34 @@
   <input type="number" placeholder="Add Calories" id="item-calories">
 </div>
 </div>
-<div class="row">
+<!-- <div class="row">
 <div class="input-field col s6">
   <label for="item-name">Lunch</label><br>
 <input type="text" placeholder="Add Item" id="item-name">
-</div>
-<br>
+</div> -->
+<!-- <br>
 <div class="input-field col s6">
-  <!-- <label for="item-calories">Calories</label> -->
-  <input type="number" placeholder="Add Calories" id="item-calories">
+<label for="item-calories">Calories</label> -->
+  <!-- <input type="number" placeholder="Add Calories" id="item-calories">
 </div>
-</div>
-<div class="row">
+</div> --> 
+<!-- <div class="row">
 <div class="input-field col s6">
   <label for="item-name">Dinner</label><br>
 <input type="text" placeholder="Add Item" id="item-name">
-</div>
-<br>
+</div> -->
+<!-- <br>
 <div class="input-field col s6">
-  <!-- <label for="item-calories">Calories</label> -->
-  <input type="number" placeholder="Add Calories" id="item-calories">
+<label for="item-calories">Calories</label> -->
+  <!-- <input type="number" placeholder="Add Calories" id="item-calories">
 </div>
 </div>
-</div>
+</div> --> 
 <button class="add-btn btn blue darken-3"><i class="fa fa-plus"></i>Log meals</button>
 <button class="update-btn btn orange"><i class="fa fa-pencil-square-o"></i> Update Meal</button>
 <button class="delete-btn btn red"><i class="fa fa-remove"></i> Delete Meal</button>
 
+ </div>
 </div>
 
 </div>
@@ -118,10 +152,19 @@
     <ul id="item-list" class="collection">
     </ul>
   </div>
-  <section>
 
-    <div class="history">
+  <section>
+    <div id="history" class="history">
+      <button onclick="openHistory('historycontent')">
   <img src="History.png" alt="View history icon"> <h4> Show Past History</h4>
+  </button>
+  </div>
+
+  <div id="historycontent" class="historycontent">
+<h3> Past History</h3>
+<span class="close button" onclick="closehistoryPopUps()">
+  <img id="exit" src="Exit.png"> </span>
+
   </div>
   </section>
 
@@ -168,23 +211,24 @@
       <img class="pancakeimg" src="Banana Oat Pancakes.png" style="max-width: 33%;">
       <h2 class="Banana-title"> Banana Oat <br> Pancakes</h2>
       <h3> Ingredients</h3>
-      <p>
-        1 bananas <br><br>
-        1 eggs <br><br>
-        1/4 cup rolled oats <br><br>
-        1/4 teaspoon baking powder <br><br>
-        Pinch of salt <br><br>
-        Maple syrup to serve (optional) <br><br>
-        Fresh fruit of your choice to serve <br><br>
-      </p>
+  <ul>
+        <li>1 bananas </li>
+        <li>1 eggs </li>
+        <li>1/4 cup rolled oats </li>
+        <li>1/4 teaspoon baking powder </li>
+        <li>Pinch of salt </li>
+        <li>Maple syrup to serve (optional) </li>
+        <li>Fresh fruit of your choice to serve </li>
+  </ul>
     
       <h3> Method</h3>
-      
-    1. In a blender, combine the peeled banana, eggs, oats, baking powder and salt.<br>
-    2. Allow to blend until the mixture is as smooth as you want it and blended well. Allow the batter to stand for 10-20 minutes until thickened slightly. <br>
-    3. Heat a non-stick frying pan over medium heat. <br>
-    4. Fry spoonfuls of the batter until golden brown on both sides. <br>
-    5. Serve with a drizzle of maple syrup and fresh fruit of your choice. <br>
+      <ol type="1">
+    <li>In a blender, combine the peeled banana, eggs, oats, baking powder and salt.</li>
+    <li>Allow to blend until the mixture is as smooth as you want it and blended well. Allow the batter to stand for 10-20 minutes until thickened slightly. </li>
+    <li>Heat a non-stick frying pan over medium heat. </li>
+    <li>Fry spoonfuls of the batter until golden brown on both sides. </li>
+    <li>Serve with a drizzle of maple syrup and fresh fruit of your choice. </li>
+    </ol>
     
       <h3> Nutrient Values</h3>
       <div class="nutritional-values">
@@ -255,14 +299,15 @@
     </ul>
   
     <h3> Method</h3>
-    
-<strong> 1. </strong>Preheat the oven to 190ºC/375°F.<br>
-<strong>2.</strong> Peel and chop the squash into large chunks, finely chop the chilli, then place into a roasting dish. <br>
-<strong>3.</strong> Scatter over the cumin seeds and thyme sprigs, then toss together with oil. Season with sea salt and roast for 45 to 50 minutes, or until cooked and lightly golden, turning halfway. <br>
-<strong>4.</strong> Place the couscous in a bowl and pour over enough boiling water to sit 1cm above the couscous. Cover the bowl and leave for 10 minutes. <br>
-<strong>5.</strong> Toast the pumpkin seeds in a dry frying pan. <br>
-<strong>6.</strong> Uncover and fluff the couscous with a fork, stir in the lemon zest and juice, the roasted squash and 1/8 tablespoons of oil. Serve scattered with the pumpkin.<br>
-  
+    <ol type="1">
+<li>Preheat the oven to 190ºC/375°F.</li>
+<li>Peel and chop the squash into large chunks, finely chop the chilli, then place into a roasting dish.</li>
+<li>Scatter over the cumin seeds and thyme sprigs, then toss together with oil. Season with sea salt and roast for 45 to 50 minutes, or until cooked and lightly golden, turning halfway.</li>
+<li>Place the couscous in a bowl and pour over enough boiling water to sit 1cm above the couscous. Cover the bowl and leave for 10 minutes. </li>
+<li>Toast the pumpkin seeds in a dry frying pan. </li>
+<li>Uncover and fluff the couscous with a fork, stir in the lemon zest and juice, the roasted squash and 1/8 tablespoons of oil. Serve scattered with the pumpkin.</li>
+  </ol>
+
     <h3> Nutrient Values</h3>
     <div class="nutritional-values">
   <p class="pancake-calorie">266kcal</p>
@@ -342,7 +387,8 @@
       <li>Save a few coriander sprigs to one side, then pick and finely chop the remaining coriander and the mint leaves. Combine with the yoghurt, and season to taste.</li>
       <li>Using a speed-peeler, peel the cucumber into ribbons and place in a bowl. Peel and finely slice the shallots and chilli, then add to the bowl. Sprinkle over the vinegar, sugar and a pinch of salt, and mix with your hands to combine the flavours.</li>
       <li>Place a tortilla on each plate and flake over the salmon fillets, including any crispy skin. Add a dollop of the herby yoghurt, the minty cucumber (squeezing out any liquid) and pick over the reserved coriander leaves. Roll up and enjoy.</li>
-        
+        </ol>
+
           <h3> Nutrient Values</h3>
           <div class="nutritional-values">
         <p class="pancake-calorie">452kcal</p>
@@ -471,7 +517,7 @@
   </section>
    
       
- <section>
+ <!-- <section>
 
                   <div class="meal-tracker">
   <h3 style="color:white"> Day One </h3>
@@ -497,7 +543,7 @@
 </div>
 </div>
 
-</section>
+</section> -->
 
 </body>
 </html>

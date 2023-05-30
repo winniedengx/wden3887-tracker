@@ -20,46 +20,6 @@ function updateProgressBar() {
 }
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     var image = document.querySelector('.pancake-container img');
-//     console.log(image)
-//     var popupContainer = document.querySelector('#pancake-container');
-
-//     image.addEventListener('click', function() {
-//         popupContainer.getElementsByClassName.display = 'block';
-//     });
-
-//     popupContainer.addEventListener('click', function() {
-//         popupContainer.style.display = 'none';
-
-//     });
-//     });
-
-    // https://www.google.com/search?q=how+to+make+a+user+input+form+in+JavaScript&rlz=1C5CHFA_enAU1040AU1040&cs=1&biw=1470&bih=808&tbm=vid&sxsrf=APwXEdeN1KFamBAiYDrb1S5KZN7KT7xulw%3A1684655201236&ei=YcxpZLj6Dd3K2roPv_6cyAM&ved=0ahUKEwj4rtrW9YX_AhVdpVYBHT8_BzkQ4dUDCA0&uact=5&oq=how+to+make+a+user+input+form+in+JavaScript&gs_lcp=Cg1nd3Mtd2l6LXZpZGVvEAMyCgghEKABEMMEEAo6BQgAEIAEOgYIABAIEB46CAgAEAgQHhAKOggIABCKBRCGAzoHCCMQsAIQJzoICAAQCBAHEB46CggAEAgQBxAeEAo6CAghEKABEMMEUKAEWLwdYKceaABwAHgAgAHxAYgB9RSSAQYwLjExLjOYAQCgAQHAAQE&sclient=gws-wiz-video#fpstate=ive&vld=cid:5b22bc62,vid:w9GNyw8AvlM 
-    
-
-//    document.getElementById("myButton").onclick = function() {
-
-//     // Assigning any value of my text to the variable myName //
-//     var myName = document.getElementById("myText").value;
-//    }
-
-//    console.log("Hey",myName);
-
-// function handleSubmit() {
-
-//     // Receiving user input from the forms
-//     var name= document.getElementById("name").value;
-//     var option = document.getElementById("Option").value;
-
-//     // Display submitted information
-//     var result= document.getElementById("result");
-//     result.innerHTML = "Name: " + name + "<br>Option: " + option;
-
-// //   Prevent the form from submitting and refreshing the page
-//     return false;
-
-
 function handleClick(box) {
     box.style.backgroundColor= "blue";
     box.innerHTML= "Clicked!";
@@ -91,35 +51,6 @@ document.getElementById("meal").value = "";
 document.getElementById("calories").value = "";
 }
 
-// function openPopup() {
-//     var overlay = document.getElementById("pancake-popup");
-//     overlay.style.visibility = "visible"; 
-//     overlay.style.opacity = 1;
-// }
-
-
-// function closePopup() {
-//     var overlay = document.getElementById("pancake-popup");
-//     overlay.style.visibility = "hidden";
-//     overlay.style.opacity = 0;
-// }
-
-// Get references to the button and popup elements
-// var openButton = document.querySelector('.food-container button');
-// var overlay = document.getElementById('pancake-popup');
-
-// // Add event listener to open the popup
-// openButton.addEventListener('click', function() {
-//   overlay.style.visibility = 'visible';
-//   overlay.style.opacity = 1;
-// });
-
-// Add event listener to close the popup
-// var closeButton = document.querySelector('.close.button');
-// closeButton.addEventListener('click', function() {
-//   overlay.style.visibility = 'hidden';
-//   overlay.style.opacity = 0;
-// });
 
 //POP UP CODE STARTS HERE
 function openPopUp(id) {
@@ -135,7 +66,53 @@ function openPopUp(id) {
 function closePopUps(){
     var overlays = document.getElementsByClassName("popup-overlay");
     for (let i =0; i < overlays.length; i++){
-        const element = overlays[1];
+        const element = overlays[i];
+        element.style.display = "none";
+    }
+
+var foods = document.getElementById("foods");
+foods.style.display = "flex";
+}
+
+
+// Meal add 
+function openMeal(id) {
+    var overlay = document.getElementById(id);
+    console.log(overlay.style);
+    overlay.style.display = "none";
+
+    var card = document.getElementById("card");
+    card.style.display = "block";
+}
+
+
+function closecalenderPopUps(){
+    var overlays = document.getElementsByClassName("container");
+    for (let i =0; i < overlays.length; i++){
+        const element = overlays[i];
+        element.style.display = "none";
+    }
+
+var foods = document.getElementById("foods");
+foods.style.display = "flex";
+}
+
+// View history 
+
+function openhistoryPopUps(id) {
+    var overlay = document.getElementById(id);
+    console.log(overlay.style);
+    overlay.style.display = "none";
+
+    var historycontent = document.getElementById("historycontent");
+    historycontent.style.display = "block";
+}
+
+
+function closehistoryPopUps(){
+    var overlays = document.getElementsByClassName("historycontent");
+    for (let i =0; i < overlays.length; i++){
+        const element = overlays[i];
         element.style.display = "none";
     }
 

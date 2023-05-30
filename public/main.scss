@@ -1,3 +1,7 @@
+body {
+    margin:0;
+}
+
 .progress-bar {
     width: 100%;
     background-color: #F2D2BD;
@@ -25,13 +29,13 @@
     margin-left: 10px;
 }
 
-.box {
-    width: 14%;
-    height: 100px;
-    background-color: #F2D2BD;
-    margin: 0 2px;
-    cursor: pointer;
-  }
+// #box {
+//     width: 14%;
+//     height: 100px;
+//     background-color: #F2D2BD;
+//     margin: 0 2px;
+//     cursor: pointer;
+//   }
   
   .green {
     background-color: green;
@@ -118,9 +122,19 @@ img {
 //     transition: width 0.5s ease;
 // }
 
-.calendar {
+#calendar {
     display: flex;
     flex-direction: row;
+}
+
+.calender button {
+    width: 200px;
+    height: 200px; 
+    background-color: #F2D2BD;
+    border: none;
+    margin: 2px 2px;
+    align-items: center;
+    justify-content: center;
 }
 
 .row {
@@ -142,20 +156,38 @@ img {
     cursor: pointer;
 }
 
-.card {
+#historycontent {
     background-color: #F2D2BD;
     padding: 5%;
     margin: 5%;
-    border-radius: 5%;
+    border-radius: 20px;
 }
 
-.card-title {
+#historycontent h3{
+    color: white
+}
+
+#history button {
+    background-color: transparent;
+    border: none;
+}
+
+
+#card {
+    background-color: #F2D2BD;
+    padding: 5%;
+    margin: 5%;
+    border-radius: 20px;
+    display: none;
+}
+
+#card-title {
     color: white;
     text-align: center;
     justify-content: center;
 }
 
-.card-content {
+#card-content {
     justify-content: center;
 
 }
@@ -182,7 +214,9 @@ img {
 .foods > button {
     width: 200px;
     height: 200px;
-    margin: 40px;
+    margin: 20px;
+    border: none;
+    background: transparent;
 }
 
 .foods > button > img {
@@ -211,17 +245,6 @@ button {
     color: white;
 }
 
-.meal-tracker {
-    background: #F2D2BD;
-    padding: 5%;
-    margin: 10%;
-    border-radius: 5%;
-}
-
-.done-button {
-    background-color: #C1E1C1;
-}
-
 
 #pancake-popup {
     display: none;
@@ -231,7 +254,7 @@ button {
     background: #F2D2BD;
     padding: 5%;
     margin: 10%;
-    border-radius: 5%;
+    border-radius: 20px;
 }
 
 // .pancakeimg {
@@ -250,11 +273,17 @@ button {
     text-align:center;
 }
 
-.close-button {
-    position: absolute;
-    cursor: pointer;
-    justify-content: top-left;
+#pancake-popup button {
+    background-color: #C1E1C1;
+    border-radius: 5px;
+    margin-right:auto;
+    margin-left:0;
 }
+// .close-button {
+//     position: absolute;
+//     cursor: pointer;
+//     justify-content: top-left;
+// }
 
 .nutritional-values img{
     width: 80%;
@@ -268,7 +297,7 @@ button {
     background: #F2D2BD;
     padding: 5%;
     margin: 10%;
-    border-radius: 5%;
+    border-radius:20px;
 }
 
 #salad-popup button {
@@ -305,7 +334,7 @@ button {
     background: #F2D2BD;
     padding: 5%;
     margin: 10%;
-    border-radius: 5%;
+    border-radius: 20px;
 }
 
 #salmon-popup button {
@@ -333,7 +362,7 @@ button {
     background: #F2D2BD;
     padding: 5%;
     margin: 10%;
-    border-radius: 5%;
+    border-radius: 20px;
 }
 
 #raspberry-popup button {

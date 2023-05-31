@@ -11,7 +11,7 @@
   <script src="script.js"></script>
 
   <header>
-    <img src="Banner logo.png" alt="Banner" width="100%">
+    <img src="Images/Banner logo.png" alt="Banner" width="100%">
   </header>
 
 <section>
@@ -32,13 +32,14 @@
 </div>
 </section>
 
+<img src="Images/Tracker.png" class="tracker"> 
 
   <section>
-    <h3>Track your Healthy Eating</h3>
+    <h1>Track your Healthy Eating</h1>
 
     <div class="row-flower">
-      <img src="Leaf1.png" class="leaf-one">
-      <img src="Leaf2.png" class="leaf-two">
+      <img src="Images/Leaf1.png" class="leaf-one">
+      <img src="Images/Leaf2.png" class="leaf-two">
       </div>
 
 
@@ -46,31 +47,31 @@
     <div class="calender" id="calendar">
 
 <button onclick="openMeal('card')">
-<div id="one" class="box">Day 1 </div>
+<div id="one" class="box"> <p>Day 1</p> </div>
 </button>
 
 <button onclick="openMeal('card')">
-  <div id="two" class="box">Day 2 </div>
+  <div id="two" class="box"><p>Day 2 </p></div>
   </button>
 
   <button onclick="openMeal('card')">
-    <div id="three" class="box">Day 3</div>
+    <div id="three" class="box"><p>Day 3 </p></div>
     </button>
 
     <button onclick="openMeal('card')">
-      <div id="four" class="box">Day 4</div>
+      <div id="four" class="box"><p>Day 4</p></div>
       </button>
 
       <button onclick="openMeal('card')">
-        <div id="five" class="box">Day 5</div>
+        <div id="five" class="box"><p>Day 5</p></div>
         </button>
 
         <button onclick="openMeal('card')">
-          <div id="six" class="box">Day 6</div>
+          <div id="six" class="box"><p>Day 6</p></div>
           </button>
 
           <button onclick="openMeal('card')">
-            <div id="seven" class="box">Day 7</div>
+            <div id="seven" class="box"><p>Day 7</p></div>
             </button>
     </div>
 
@@ -80,15 +81,20 @@
 <div id="history" class="history">
   <button onclick="openhistoryPopUps('historycontent')">
     <div class="history-row">
-<img src="History.png" alt="View history icon"> <br> <h4> Show Past History</h4>
+<img src="Images/History.png" alt="View history icon"> <br> <h4> Show Past History</h4>
 </div>
 </button>
 </div>
 
 <div id="historycontent" class="historycontent">
 <span class="close button" onclick="closehistoryPopUps()">
-  <img id="exit" src="Exit.png"> </span>
-<h3> Past History</h3>
+  <img class="exit" src="Images/Exit.png"> </span>
+<h2 class="history-title"> Past History</h2>
+
+<!-- Show user data that was entered in the meal add pop up -->
+<div id="msg">
+  <pre></pre>
+</div>
 
 </div>
   </section>
@@ -96,20 +102,62 @@
   <div id="card" class="container">
 <div class="card-content">
   <span class="close button" onclick="closecalenderPopUps()">
-    <img id="exit" src="Exit.png"> </span>
-  <h3 style="color:white"> Meals </h3>
-<form class="col">
+    <img class="exit" src="Images/Exit.png"> </span>
+  <h3 style="color:white"> <h2 class="meal-title">Meals of the Day </h2>
+
+<form>
+  <div class="formBox">
+    <label for="Meal"><h3 class="meal-types">Breakfast</h3></label>
+    <input type="text" id="breakfast" placeholder="Enter Breakfast Option"/>
+  </div>
+  <div class="formBox">
+    <label for="Enter"><h4 class="calorie-text">Calories</h4></label>
+    <input type="number" id="calories" placeholder=""/>
+  </div>
+<br>
+  <div class="formBox">
+    <label for="Meal"><h3 class="meal-types">Lunch</h3></label>
+    <input type="text" id="lunch" placeholder="Enter Lunch Option"/>
+  </div>
+
+  <div class="formBox">
+    <label for="Enter"><h4 class="calorie-text">Calories</h4></label>
+    <input type="number" id="calories" placeholder=""/>
+  </div>
+<br>
+  <div class="formBox">
+    <label for="Meal"><h3 class="meal-types">Dinner</h3></label> 
+    <input type="text" id="dinner" placeholder="Enter Dinner Option"/>
+  </div>
+  <div class="formBox">
+    <label for="Enter"><h4 class="calorie-text">Calories</h4></label>
+    <input type="number" id="calories" placeholder=""/>
+  </div>
+
+  <div class="formBox">
+    <div class="row">
+    <button id="logmeal"> <img class="done-button" src="Images/Done.png"><h4 class="done-btn">Done</h4></button>
+  </div>
+  </div>
+
+
+</form>
+</div>
+</div> 
+
+
+<!-- <form class="col">
 <div class="row">
-<div class="input-field col s6">
-  <label for="item-name">Breakfast</label> <br>
-<input type="text" placeholder="Add Item" id="item-name">
+<div class="breakfast-input">
+  <label for="breakfast-item">Breakfast</label> <br>
+<input type="text" placeholder="Breakfast Choice" id="breakfast-item">
 </div>
 <br>
-<div class="input-field col s6">
-  <!-- <label for="item-calories">Calories</label> -->
-  <input type="number" placeholder="Add Calories" id="item-calories">
+<div class="calorie-input">
+<label for="item-calories">Calories</label> -->
+  <!-- <input type="number" placeholder="Add Calories" id="calorie-value">
 </div>
-</div>
+</div> -->
 <!-- <div class="row">
 <div class="input-field col s6">
   <label for="item-name">Lunch</label><br>
@@ -133,7 +181,7 @@
 </div>
 </div>
 </div> --> 
-<button class="add-btn btn blue darken-3"><i class="fa fa-plus"></i>Log meals</button>
+<!-- <button class="add-btn btn blue darken-3"><i class="fa fa-plus"></i>Log meals</button>
 <button class="update-btn btn orange"><i class="fa fa-pencil-square-o"></i> Update Meal</button>
 <button class="delete-btn btn red"><i class="fa fa-remove"></i> Delete Meal</button>
 
@@ -144,14 +192,14 @@
 </form>
 
 </div>
-</div>
+</div> -->
 
 
     <!-- Calorie Count -->
     <h3 class="center-align">Total Calories: <span class="total-calories">0</span></h3>
 
     <!-- Item List -->
-    <ul id="item-list" class="collection">
+    <ul id="meal-history" class="meal-history">
     </ul>
   </div>
 
@@ -169,22 +217,22 @@
   <div class="foods" id="foods">
 
 <button onclick="openPopUp('pancake-popup')">
-<img src="Banana Oat Pancakes.png" alt="Banana Oat Pancakes"> 
-<h3> Banana Oat Pancakes</h3>
+<img src="Images/Banana Oat Pancakes.png" alt="Banana Oat Pancakes"> 
+<h3> Banana Oat <br> Pancakes</h3>
 </button>
 
 <button onclick="openPopUp('salad-popup')">
-  <img src="Roasted Squash & Couscous Salad.png" alt="Roasted Squash & Couscous Salad">
+  <img src="Images/Roasted Squash & Couscous Salad.png" alt="Roasted Squash & Couscous Salad">
   <h3> Roasted Squash & Couscous Salad</h3>
   </button>
 
 <button onclick="openPopUp('salmon-popup')">
-  <img src="Salmon Tacos.png" alt="Salmon Tacos">
+  <img src="Images/Salmon Tacos.png" alt="Salmon Tacos">
   <h3> Salmon Tacos</h3>
   </button>
 
   <button onclick="openPopUp('raspberry-popup')">
-    <img src="Raspberry Slice.png" alt="Raspberry Slice">
+    <img src="Images/Raspberry Slice.png" alt="Raspberry Slice">
     <h3>Raspberry Slice</h3>
     </button>
 
@@ -196,10 +244,10 @@
         <div class="popup-buttons">
       <button>I ate this today!</button>
       <span class="close button" onclick="closePopUps()">
-        <img id="exit" src="Exit.png"> </span>
+        <img id="exit" src="Images/Exit.png"> </span>
        </div>
-      <img class="pancakeimg" src="Banana Oat Pancakes.png" style="max-width: 33%;">
-      <h2 class="Banana-title"> Banana Oat <br> Pancakes</h2>
+      <img src="Images/Banana Oat Pancakes.png" class= "recipe-img" style="max-width: 33%;">
+      <h2 class="recipe-title"> Banana Oat <br> Pancakes</h2>
       <h3> Ingredients</h3>
   <ul>
         <li>1 bananas </li>
@@ -225,40 +273,40 @@
     <p class="pancake-calorie">245kcal</p>
     <div class="row">
       <div class="column">
-    <h4 class="nurtients">Protein</h4>
+    <p>Protein</p>
     </div>
     <div class="column">
-    <h4 class="nutrient-values">9g</h4>
+    <p>9g</p>
     </div>
     </div>
-    <img src="Protein1.png" alt="Protein value scale">
+    <img src="Images/Protein1.png" class= "recipe-img" alt="Protein value scale">
     <div class="row">
       <div class="column">
-    <h4 class="nurtients">Carbs</h4>
+    <p>Carbs</p>
     </div>
     <div class="column">
-    <h4 class="nutrient-values">41g</h4>
+    <p>41g</p>
     </div>
     </div>
-    <img src="Carb1.png" alt="Carb value scale">
+    <img src="Images/Carb1.png" class= "recipe-img" alt="Carb value scale">
     <div class="row">
       <div class="column">
-    <h4 class="nurtients">Fat</h4>
+    <p>Fat</p>
     </div>
     <div class="column">
-    <h4 class="nutrient-values">1g</h4>
+    <p>1g</p>
     </div>
     </div>
-    <img src="Fat1.png" alt="Carb value scale">
+    <img src="Images/Fat1.png" class= "recipe-img" alt="Carb value scale">
     <div class="row">
       <div class="column">
-    <h4 class="nurtients">Fiber</h4>
+    <p>Fiber</p>
     </div>
     <div class="column">
-    <h4 class="nutrient-values">5g</h4>
+    <p>5g</p>
     </div>
     </div>
-    <img src="Fiber1.png" alt="Fiber value scale">
+    <img src="Images/Fiber1.png" class= "recipe-img" alt="Fiber value scale">
   </div>
 </div>
   </div>
@@ -271,10 +319,10 @@
     <div class="popup-buttons">
     <button>I ate this today!</button>
     <span class="close button" onclick="closePopUps()">
-      <img id="exit" src="Exit.png"> </span>
+      <img id="exit" src="Images/Exit.png"> </span>
       </div>
-    <img src="Roasted Squash & Couscous Salad.png" style="max-width: 33%;">
-    <h2>Roasted Squash & <br> Couscous Salad </h2>
+    <img src="Images/Roasted Squash & Couscous Salad.png" class= "recipe-img" style="max-width: 33%;">
+    <h2 class="recipe-title">Roasted Squash & <br> Couscous Salad </h2>
     <h3> Ingredients</h3>
     <ul>
       <li>1/4  butternut squash </li>
@@ -303,40 +351,40 @@
   <p class="pancake-calorie">266kcal</p>
   <div class="row">
     <div class="column">
-  <h4 class="nurtients">Protein</h4>
+  <p>Protein</p>
   </div>
   <div class="column">
-  <h4 class="nutrient-values">6g</h4>
+  <p>6g</p>
   </div>
   </div>
-  <img src="Protein2.png" alt="Protein value scale">
+  <img src="Images/Protein2.png" class= "recipe-img" alt="Protein value scale">
   <div class="row">
     <div class="column">
-  <h4 class="nurtients">Carbs</h4>
+  <p>Carbs</p>
   </div>
   <div class="column">
-  <h4 class="nutrient-values">34.7g</h4>
+  <p>34.7g</p>
   </div>
   </div>
-  <img src="Carb2.png" alt="Carb value scale">
+  <img src="Images/Carb2.png" class= "recipe-img" alt="Carb value scale">
   <div class="row">
     <div class="column">
-  <h4 class="nurtients">Fat</h4>
+  <p>Fat</p>
   </div>
   <div class="column">
-  <h4 class="nutrient-values">13.2g</h4>
+  <p>13.2g</p>
   </div>
   </div>
-  <img src="Fat2.png" alt="Carb value scale">
+  <img src="Images/Fat2.png" class= "recipe-img" alt="Carb value scale">
   <div class="row">
     <div class="column">
-  <h4 class="nurtients">Fiber</h4>
+  <p>Fiber</p>
   </div>
   <div class="column">
-  <h4 class="nutrient-values">4.7g</h4>
+  <p>4.7g</p>
   </div>
   </div>
-  <img src="Fiber2.png" alt="Fiber value scale">
+  <img src="Images/Fiber2.png" class= "recipe-img" alt="Fiber value scale">
   </div>
   </div>
     </div>
@@ -349,10 +397,10 @@
           <div class="popup-buttons">
           <button>I ate this today!</button>
           <span class="close button" onclick="closePopUps()">
-            <img id="exit" src="Exit.png"> </span>
+            <img id="exit" src="Images/Exit.png"> </span>
             </div>
-          <img src="Salmon Tacos.png" style="max-width: 33%;">
-          <h2>Salmon Tacos </h2>
+          <img src="Images/Salmon Tacos.png" class= "recipe-img" style="max-width: 33%;">
+          <h2 class="recipe-title">Salmon Tacos </h2>
           <h3> Ingredients</h3>
 <ul>
         <li>125 g salmon fillets, skin on, from sustainable sources </li>
@@ -384,40 +432,40 @@
         <p class="pancake-calorie">452kcal</p>
         <div class="row">
           <div class="column">
-        <h4 class="nurtients">Protein</h4>
+        <p>Protein</p>
         </div>
         <div class="column">
-        <h4 class="nutrient-values">33.6g</h4>
+        <p>33.6g</p>
         </div>
         </div>
-        <img src="Protein3.png" alt="Protein value scale">
+        <img src="Images/Protein3.png" class= "recipe-img" alt="Protein value scale">
         <div class="row">
           <div class="column">
-        <h4 class="nurtients">Carbs</h4>
+        <p>Carbs</p>
         </div>
         <div class="column">
-        <h4 class="nutrient-values">44.6g</h4>
+        <p>44.6g</p>
         </div>
         </div>
-        <img src="Carb3.png" alt="Carb value scale">
+        <img src="Images/Carb3.png" class= "recipe-img" alt="Carb value scale">
         <div class="row">
           <div class="column">
-        <h4 class="nurtients">Fat</h4>
+        <p>Fat</p>
         </div>
         <div class="column">
-        <h4 class="nutrient-values">16.5g</h4>
+        <p>16.5g</p>
         </div>
         </div>
-        <img src="Fat3.png" alt="Carb value scale">
+        <img src="Images/Fat3.png" class= "recipe-img" alt="Carb value scale">
         <div class="row">
           <div class="column">
-        <h4 class="nurtients">Fiber</h4>
+        <p>Fiber</p>
         </div>
         <div class="column">
-        <h4 class="nutrient-values">2.4g</h4>
+        <p>2.4g</p>
         </div>
         </div>
-        <img src="Fiber3.png" alt="Fiber value scale">
+        <img src="Images/Fiber3.png" class= "recipe-img" alt="Fiber value scale">
 
       </div>
     </div>
@@ -429,10 +477,10 @@
             <div class="popup-buttons">
             <button>I ate this today!</button>
             <span class="close button" onclick="closePopUps()">
-              <img id="exit" src="Exit.png"> </span>
+              <img id="exit" src="Images/Exit.png"> </span>
               </div>
-            <img src="Raspberry Slice.png" style="max-width: 33%;">
-            <h2>Raspberry Slice </h2>
+            <img src="Images/Raspberry Slice.png" class= "recipe-img" style="max-width: 33%;">
+            <h2 class="recipe-title">Raspberry Slice </h2>
             <h3> Ingredients</h3>
   
             <ul>
@@ -461,40 +509,40 @@
           <p class="pancake-calorie">220kcal</p>
           <div class="row">
             <div class="column">
-          <h4 class="nurtients">Protein</h4>
+          <p>Protein</p>
           </div>
           <div class="column">
-          <h4 class="nutrient-values">4.4g</h4>
+          <p>4.4g</p>
           </div>
           </div>
-          <img src="Protein4.png" alt="Protein value scale">
+          <img src="Images/Protein4.png" class= "recipe-img" alt="Protein value scale">
           <div class="row">
             <div class="column">
-          <h4 class="nurtients">Carbs</h4>
+          <p>Carbs</p>
           </div>
           <div class="column">
-          <h4 class="nutrient-values">35.7g</h4>
+          <p>35.7g</p>
           </div>
           </div>
-          <img src="Carb4.png" alt="Carb value scale">
+          <img src="Images/Carb4.png" class= "recipe-img" alt="Carb value scale">
           <div class="row">
             <div class="column">
-          <h4 class="nurtients">Fat</h4>
+          <p>Fat</p>
           </div>
           <div class="column">
-          <h4 class="nutrient-values">11g</h4>
+          <p>11g</p>
           </div>
           </div>
-          <img src="Fat4.png" alt="Carb value scale">
+          <img src="Images/Fat4.png" class= "recipe-img" alt="Carb value scale">
           <div class="row">
             <div class="column">
-          <h4 class="nurtients">Fiber</h4>
+          <p>Fiber</p>
           </div>
           <div class="column">
-          <h4 class="nutrient-values">2.3g</h4>
+          <p>2.3g</p>
           </div>
           </div>
-          <img src="Fiber4.png" alt="Fiber value scale">
+          <img src="Images/Fiber4.png" class= "recipe-img" alt="Fiber value scale">
           </div>
           </div>
             </div>
@@ -507,33 +555,6 @@
   </section>
    
       
- <!-- <section>
-
-                  <div class="meal-tracker">
-  <h3 style="color:white"> Day One </h3>
-  <label for="meal">Meal:</label>
-  <input type="text" id="meak" placeholder="Enter meal" required><br><br>
-  <label for="Ingredients">Ingredients:</label>
-  <input type="text" id="Ingredients" placeholder="Enter Ingredients" required><br><br>
-
-
-  <label for="calories">Calories:</label>
-  <input type="number" id="calories" placeholder="Enter calories" required><br><br>
-
-  <div class="done-button">
-  <button onclick="addMeal()"><img src="Done.png">Done</button>
-</div>
-
-  <table id="mealTable">
-    <tr>
-        <th>Meal</th>
-        <th>Calories</th>
-    </tr>
-</table>
-</div>
-</div>
-
-</section> -->
 
 </body>
 </html>

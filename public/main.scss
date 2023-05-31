@@ -15,6 +15,14 @@ body {
     transition: width 0.3s;
 }
 
+.tracker {
+    width: 33%;
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    
+}
+
 .form {
     display: flex;
     align-items: center;
@@ -29,74 +37,79 @@ body {
     margin-left: 10px;
 }
 
-// #box {
-//     width: 14%;
-//     height: 100px;
-//     background-color: #F2D2BD;
-//     margin: 0 2px;
-//     cursor: pointer;
-//   }
   
   .green {
     background-color: green;
   }
   
 
-// #one {
-//     margin: 2px;
-// }
-
-// #one:hover {
-//     background-color:#cccccc;
-// }
-
-// #two {
-//     margin: 2px;
-// }
-
-// #three {
-//     margin: 2px;
-// }
-
-// #four {
-//     margin: 2px;
-// }
-
-// #five {
-//     margin: 2px;
-// }
-
-// #six {
-//     margin: 2px;
-// }
-
-// #seven {
-//     margin: 2px;
-// }
-
 h1 {
     text-align: center;
+    font-family: sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
 }
 
 h3 {
     text-align: center;
+    font-family: sans-serif;
 }
 
-.Banana-title {
+.meal-types {
+    font-size: 20pt;
+    text-align: left;
+    font-family: sans-serif;
+}
+
+.calorie-text {
+    font-size: 12pt;
+    text-align: left;
+    font-family: sans-serif;
+}
+
+.recipe-title {
     font-size: 25pt;
     text-align: center;
+    color: black;
+    font-family: sans-serif;
 }
+
+.meal-title {
+    font-size: 25pt;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+.history-title {
+    font-size: 25pt;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
 
 h4 {
     text-align: center;
+    font-family: sans-serif;
 }
 
-
-img {
+.recipe-img {
     display: block;
-    margin: 0 auto;
-    align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
+// img {
+//     display: block;
+//     margin: 0 auto;
+//     align-items: center;
+// }
 
 // .history {
 //     display: flex;
@@ -126,7 +139,6 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    z-index: 1;
 }
 
 .calender button {
@@ -139,6 +151,13 @@ img {
     justify-content: center;
 }
 
+.calender button:hover {
+    background-color: #C1E1C1;
+    font-weight: bold;
+   
+}
+
+
 .row {
     display: flex;
     align-items: center; 
@@ -147,7 +166,7 @@ img {
 }
 
 .row-flower {
-    display: flex
+    display: flex;
 }
 
 .leaf-one {
@@ -157,11 +176,21 @@ img {
 }
 
 .leaf-two {
-    width: 100px;
+    width: 200px;
+    margin-left:auto;
+    margin-right: 0;
 }
 
 .day {
     width: 100px;
+}
+
+.formBox button {
+    background-color: #C1E1C1;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin-right:0;
+    margin-left: auto;
 }
 
 .meal-entry {
@@ -187,7 +216,6 @@ img {
 #history {
     position: absolute;
     right: 0px;
-    margin: 5%;
 }
 
 #history button {
@@ -203,6 +231,12 @@ img {
 
 }
 
+.done-btn {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+
 #card {
     background-color: #F2D2BD;
     padding: 5%;
@@ -210,6 +244,15 @@ img {
     border-radius: 20px;
     display: none;
 }
+
+// #msg {
+//     display: none;
+// }
+
+// .msg {
+//     display: block;
+// }
+
 
 #card-title {
     color: white;
@@ -350,6 +393,11 @@ button {
 #exit {
     width:20px;
     margin: 0;
+}
+
+.exit {
+    width:20px;
+    float: right;
 }
 
 .popup-buttons {

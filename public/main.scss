@@ -2,6 +2,88 @@ body {
     margin:0;
 }
 
+@media screen and (max-width: 768px) 
+    /* For mobile phones: */
+    {
+    .day {
+        width: 500px;
+    }
+      
+      .foods {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foods > button {
+        margin-bottom: 20px;
+        width: 300px;
+        height: 300px;
+    }
+
+    #calendar {
+        flex-wrap: nowrap;
+    
+    }
+
+    .calendar button {
+        width: calc(50% - 4px);
+        height: auto; 
+        margin: 2px;
+    }
+
+    .tracker {
+        width: 100%;
+        max-width: 200px;
+
+    }
+
+    .row-flower img {
+        width: 80px;
+    }
+
+    h1 {
+        font-size: 21pt;
+    }
+
+
+    }
+    h2 {
+        font-size: 19pt;
+    }
+
+    
+    .meal-types {
+        font-size: 19pt;
+    }
+    
+    .calorie-text {
+        font-size: 15pt;
+    }
+    
+    .recipe-title {
+        font-size: 21pt;
+    }
+    
+    .meal-title {
+        font-size: 21pt;
+    }
+    
+    .history-title {
+        font-size: 21pt;
+    }
+    
+    
+    h4 {
+        font-size: 21pt;
+    }
+
+    h5 {
+       font-size: 12pt;
+    }
+
+
+
+
 .progress-bar {
     width: 100%;
     background-color: #F2D2BD;
@@ -15,26 +97,52 @@ body {
     transition: width 0.3s;
 }
 
+
+
 .tracker {
-    width: 33%;
+    width: 500px;
     display: block;
     margin: 0 auto;
     align-items: center;
     
 }
 
-.form {
-    display: flex;
-    align-items: center;
+// .form {
+// //     display: flex;
+//     display: flex;
+//   justify-content: center;
+//   align-items: center;
 
+// }
+
+.setgoal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-calories {
+    display: none;
 }
 
 .form input[type="number"] {
-    width: 70px;
+    width: 100px;
+
 }
 
 .form button {
-    margin-left: 10px;
+    justify-content: center;
+    background-color:#C1E1C1;
+}
+
+.form button {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form button:hover {
+    font-weight: bold;
 }
 
   
@@ -46,12 +154,14 @@ body {
 h1 {
     text-align: center;
     font-family: sans-serif;
+    font-size: 35pt;
 }
 
 h2 {
     text-align: center;
     color: white;
     font-family: sans-serif;
+    font-size: 28pt;
 }
 
 h3 {
@@ -76,6 +186,7 @@ h3 {
     text-align: center;
     color: black;
     font-family: sans-serif;
+    font-size: 25pt;
 }
 
 .meal-title {
@@ -97,6 +208,11 @@ h4 {
     text-align: center;
     font-family: sans-serif;
 }
+
+h5 {
+    text-align: center;
+    font-family: sans-serif;
+} 
 
 .recipe-img {
     display: block;
@@ -121,23 +237,26 @@ h4 {
 //     margin-right: 0;
 // }
 
-// .progress-bar {
-//     width: 200px; 
-//     height: 20px; 
-//     background-color: #F2D2BD;
-//     margin-bottom: 20px;
-// }
+.progress-bar {
+    width: 200px; 
+    height: 20px; 
+    background-color: #F2D2BD;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: none;
+}
 
-// .progress {
-//     height: 100%;
-//     background-color:#C1E1C1;
-//     width: 0;
-//     transition: width 0.5s ease;
-// }
+.progress {
+    height: 100%;
+    background-color:#C1E1C1;
+    width: 0;
+    transition: width 0.5s ease;
+}
 
 #calendar {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    // flex-direction: row;
     justify-content: center;
 }
 
@@ -214,13 +333,30 @@ h4 {
 }
 
 #history {
-    position: absolute;
-    right: 0px;
+    float: right;
 }
 
 #history button {
     background-color: transparent;
     border: none;
+}
+
+.delete {
+    background-color: transparent;
+    border: none;
+    width: 100px;
+}
+
+.edit {
+    background-color: transparent;
+    border: none;
+    width: 100px;
+}
+
+.row-btn {
+    margin-right: 0;
+    margin-left: auto;
+    float: right;
 }
 
 .history-row {
@@ -231,10 +367,14 @@ h4 {
 
 }
 
-.done-btn {
+.done-button {
     margin-right: 0;
     margin-left: auto;
+    background-color: transparent;
+    border: none;
+    width: 100px;
 }
+
 
 
 #card {
@@ -277,6 +417,7 @@ h4 {
     display: grid;
 }
 
+
 .foods {
     display: flex;
     align-items: center;
@@ -286,11 +427,13 @@ h4 {
 
 .foods > button {
     width: 200px;
-    height: 200px;
-    margin: 20px;
+    height: 300px;
+    margin: 5x;
     border: none;
     background: transparent;
 }
+
+
 
 .foods > button > img {
     width: 100px;
@@ -357,6 +500,14 @@ button {
 //     cursor: pointer;
 //     justify-content: top-left;
 // }
+
+.nutrition-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 
 .nutritional-values img{
     width: 80%;

@@ -20,17 +20,22 @@
 </div>
 
 <div class="form">
-    <label for="goal">Weekly Goal:</label>
-    <input type="number" id="goal" placeholder="Enter goal" required>
+    <label for="goal"><h4>Weekly Calorie Goal</h4></label>
+    <div class="setgoal">
+    <input type="number" id="goal" placeholder="Enter Calories" required>
     <button onclick="setWeeklyGoal()">Set Goal</button>
+    </div>
 </div>
 
-<div class="form">
-    <label for="calories">Calories:</label>
-    <input type="number" id="calories" placeholder="Enter calories" required>
+<div class="form-calories">
+    <label for="calories">Calories:</label> 
+    <br> <br> <input type="number" id="calories" placeholder="Enter calories" required><br><br>
     <button onclick="addCalories()">Add Calories</button>
 </div>
+
 </section>
+
+<br><br>
 
 <img src="Images/Tracker.png" class="tracker"> 
 
@@ -81,15 +86,24 @@
 <div id="history" class="history">
   <button onclick="openhistoryPopUps('historycontent')">
     <div class="history-row">
-<img src="Images/History.png" alt="View history icon"> <br> <h4> Show Past History</h4>
+<img src="Images/History.png" alt="View history icon"> <br> <h5> Show Past History</h5>
 </div>
 </button>
 </div>
+<br>
 
 <div id="historycontent" class="historycontent">
 <span class="close button" onclick="closehistoryPopUps()">
   <img class="exit" src="Images/Exit.png"> </span>
 <h2 class="history-title"> Past History</h2>
+
+<div class="row-btn">
+<button onclick="removeFromList()">
+<img src="Images/Delete.png" alt="View history icon" class="delete"> <br>
+</button>
+
+<button> <img src="Images/Edit.png" class="edit"> </button>
+</div>
 
 <!-- Show user data that was entered in the meal add pop up -->
 <div id="msg">
@@ -112,7 +126,7 @@
   </div>
   <div class="formBox">
     <label for="Enter"><h4 class="calorie-text">Calories</h4></label>
-    <input type="number" id="calories" placeholder=""/>
+    <input type="number" id="calories" placeholder="Enter Calories"/>
   </div>
 <br>
   <div class="formBox">
@@ -122,7 +136,7 @@
 
   <div class="formBox">
     <label for="Enter"><h4 class="calorie-text">Calories</h4></label>
-    <input type="number" id="calories" placeholder=""/>
+    <input type="number" id="calories" placeholder="Enter Calories"/>
   </div>
 <br>
   <div class="formBox">
@@ -131,12 +145,12 @@
   </div>
   <div class="formBox">
     <label for="Enter"><h4 class="calorie-text">Calories</h4></label>
-    <input type="number" id="calories" placeholder=""/>
+    <input type="number" id="calories" placeholder="Enter Calories"/>
   </div>
 
   <div class="formBox">
     <div class="row">
-    <button id="logmeal"> <img class="done-button" src="Images/Done.png"><h4 class="done-btn">Done</h4></button>
+    <button id="logmeal"> <img class="done-button" src="Images/Done.png"></button>
   </div>
   </div>
 
@@ -196,15 +210,15 @@
 
 
     <!-- Calorie Count -->
-    <h3 class="center-align">Total Calories: <span class="total-calories">0</span></h3>
+    <!-- <h3 class="center-align">Total Calories: <span class="total-calories">0</span></h3>
 
-    <!-- Item List -->
-    <ul id="meal-history" class="meal-history">
+  Item List -->
+    <!-- <ul id="meal-history" class="meal-history">
     </ul>
-  </div>
+  </div> -->
 
 
-  <br> 
+  <br> <br>
 
   <section>
    <h1>Recommended Recipes </h1>
@@ -248,6 +262,8 @@
        </div>
       <img src="Images/Banana Oat Pancakes.png" class= "recipe-img" style="max-width: 33%;">
       <h2 class="recipe-title"> Banana Oat <br> Pancakes</h2>
+
+  <img src="Images/Nutritionpancake.png" class="nutrition-img">
       <h3> Ingredients</h3>
   <ul>
         <li>1 bananas </li>
@@ -323,6 +339,7 @@
       </div>
     <img src="Images/Roasted Squash & Couscous Salad.png" class= "recipe-img" style="max-width: 33%;">
     <h2 class="recipe-title">Roasted Squash & <br> Couscous Salad </h2>
+    <img src="Images/Nutritionsalad.png" class="nutrition-img">
     <h3> Ingredients</h3>
     <ul>
       <li>1/4  butternut squash </li>
@@ -401,6 +418,7 @@
             </div>
           <img src="Images/Salmon Tacos.png" class= "recipe-img" style="max-width: 33%;">
           <h2 class="recipe-title">Salmon Tacos </h2>
+          <img src="Images/Nutritionsalmon.png" class="nutrition-img">
           <h3> Ingredients</h3>
 <ul>
         <li>125 g salmon fillets, skin on, from sustainable sources </li>
@@ -481,6 +499,7 @@
               </div>
             <img src="Images/Raspberry Slice.png" class= "recipe-img" style="max-width: 33%;">
             <h2 class="recipe-title">Raspberry Slice </h2>
+            <img src="Images/Nutritionraspberry.png" class="nutrition-img">
             <h3> Ingredients</h3>
   
             <ul>

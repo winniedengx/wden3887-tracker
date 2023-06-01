@@ -10,15 +10,19 @@
 <body>
   <script src="script.js"></script>
 
+
+  <!-- Importing the banner image at the top of the web app -->
   <header>
     <img src="Images/Banner logo.png" alt="Banner" width="100%">
   </header>
 
-<section>
+  <!-- Creating a section for the progress bar where users can set their weekly calorie goal to visually see how their intake throughout the week -->
+  <section>
   <div class="progress-bar">
     <div id="progress" class="progress"></div>
 </div>
 
+<!-- div class created to contain weekly goal setter, using buttons and inputs to achieve user interaction -->
 <div class="form">
     <label for="goal"><h4>Weekly Calorie Goal</h4></label>
     <div class="setgoal">
@@ -27,6 +31,8 @@
     </div>
 </div>
 
+<!-- This button and input form allows users to add how many calories they have eaten to move the progress bar. However, in my application I don't want a button like this to appear. Instead the amount of calories tracked will be logged by users in a separate feature within the app -->
+<!-- This was added to show the idea of how the progress bar would work -->
 <div class="form-calories">
     <label for="calories">Calories:</label> 
     <br> <br> <input type="number" id="calories" placeholder="Enter calories" required><br><br>
@@ -36,6 +42,8 @@
 </section>
 
 <br><br>
+
+<!-- Since, the progress bar cannot actually work because calories are not logged, i have represented what it would look like through the image -->
 
 <img src="Images/Tracker.png" class="tracker"> 
 
@@ -48,9 +56,11 @@
       </div>
 
 
-    
+      <!-- Containing all separate day buttons in the calender in one container -->
+  
     <div class="calender" id="calendar">
 
+      <!-- This code represents that when each box is clicked on, it will open up the id, 'card' as a pop up-->
 <button onclick="openMeal('card')">
 <div id="one" class="box"> <p>Day 1</p> </div>
 </button>
@@ -83,6 +93,8 @@
 
 <br>
 
+<!-- Creating a history button that enables them to view the content inside the id, 'historycontent' -->
+
 <div id="history" class="history">
   <button onclick="openhistoryPopUps('historycontent')">
     <div class="history-row">
@@ -92,11 +104,13 @@
 </div>
 <br>
 
+<!-- Exiting the pop up button will be done by clicking the image-exit inside the div container -->
 <div id="historycontent" class="historycontent">
 <span class="close button" onclick="closehistoryPopUps()">
   <img class="exit" src="Images/Exit.png"> </span>
 <h2 class="history-title"> Past History</h2>
 
+<!-- Including a delete and edit button using images -->
 <div class="row-btn">
 <button onclick="removeFromList()">
 <img src="Images/Delete.png" alt="View history icon" class="delete"> <br>
@@ -113,13 +127,17 @@
 </div>
   </section>
 
+  <!-- Pop up container when users click the calender to add meals and calories -->
+
   <div id="card" class="container">
 <div class="card-content">
   <span class="close button" onclick="closecalenderPopUps()">
     <img class="exit" src="Images/Exit.png"> </span>
   <h3 style="color:white"> <h2 class="meal-title">Meals of the Day </h2>
 
-<form>
+    <!-- using input fields retrieve data from users on the type of meal they had for breakfast, lunch and dinner -->
+<!-- Option to add in the calories of each meal is represented by another input form that is labled as calories -->
+    <form>
   <div class="formBox">
     <label for="Meal"><h3 class="meal-types">Breakfast</h3></label>
     <input type="text" id="breakfast" placeholder="Enter Breakfast Option"/>
@@ -148,6 +166,7 @@
     <input type="number" id="calories" placeholder="Enter Calories"/>
   </div>
 
+  <!-- Clicking on the done button sends the data entered by users to store in LocalStorage, displaying results in the "Show Past History" pop up as represented by <pre></pre> -->
   <div class="formBox">
     <div class="row">
     <button id="logmeal"> <img class="done-button" src="Images/Done.png"></button>
@@ -159,65 +178,6 @@
 </div>
 </div> 
 
-
-<!-- <form class="col">
-<div class="row">
-<div class="breakfast-input">
-  <label for="breakfast-item">Breakfast</label> <br>
-<input type="text" placeholder="Breakfast Choice" id="breakfast-item">
-</div>
-<br>
-<div class="calorie-input">
-<label for="item-calories">Calories</label> -->
-  <!-- <input type="number" placeholder="Add Calories" id="calorie-value">
-</div>
-</div> -->
-<!-- <div class="row">
-<div class="input-field col s6">
-  <label for="item-name">Lunch</label><br>
-<input type="text" placeholder="Add Item" id="item-name">
-</div> -->
-<!-- <br>
-<div class="input-field col s6">
-<label for="item-calories">Calories</label> -->
-  <!-- <input type="number" placeholder="Add Calories" id="item-calories">
-</div>
-</div> --> 
-<!-- <div class="row">
-<div class="input-field col s6">
-  <label for="item-name">Dinner</label><br>
-<input type="text" placeholder="Add Item" id="item-name">
-</div> -->
-<!-- <br>
-<div class="input-field col s6">
-<label for="item-calories">Calories</label> -->
-  <!-- <input type="number" placeholder="Add Calories" id="item-calories">
-</div>
-</div>
-</div> --> 
-<!-- <button class="add-btn btn blue darken-3"><i class="fa fa-plus"></i>Log meals</button>
-<button class="update-btn btn orange"><i class="fa fa-pencil-square-o"></i> Update Meal</button>
-<button class="delete-btn btn red"><i class="fa fa-remove"></i> Delete Meal</button>
-
- </div>
-</div>
-
-</div>
-</form>
-
-</div>
-</div> -->
-
-
-    <!-- Calorie Count -->
-    <!-- <h3 class="center-align">Total Calories: <span class="total-calories">0</span></h3>
-
-  Item List -->
-    <!-- <ul id="meal-history" class="meal-history">
-    </ul>
-  </div> -->
-
-
   <br> <br>
 
   <section>
@@ -227,7 +187,7 @@
 
 <section>
 
-
+<!-- Button pop ups for recipes. Each button (the image of the recipe and name) will open a specfifc pop up -->
   <div class="foods" id="foods">
 
 <button onclick="openPopUp('pancake-popup')">
@@ -252,7 +212,7 @@
 
   </div>
 
-
+<!-- Pop up for the pancake recipe  -->
 
     <div id="pancake-popup" class="popup-overlay">
         <div class="popup-buttons">
@@ -265,6 +225,8 @@
 
   <img src="Images/Nutritionpancake.png" class="nutrition-img">
       <h3> Ingredients</h3>
+
+      <!-- Displaying ingredients in an unordered list -->
   <ul>
         <li>1 bananas </li>
         <li>1 eggs </li>
@@ -274,7 +236,7 @@
         <li>Maple syrup to serve (optional) </li>
         <li>Fresh fruit of your choice to serve </li>
   </ul>
-    
+    <!-- Displaying method in an ordered list -->
       <h3> Method</h3>
       <ol type="1">
     <li>In a blender, combine the peeled banana, eggs, oats, baking powder and salt.</li>
@@ -284,6 +246,7 @@
     <li>Serve with a drizzle of maple syrup and fresh fruit of your choice. </li>
     </ol>
     
+
       <h3> Nutrient Values</h3>
       <div class="nutritional-values">
     <p class="pancake-calorie">245kcal</p>
@@ -331,6 +294,7 @@
 </div>
   
 
+<!-- Pop up content for the salad recipe -->
 <div id="salad-popup" class="popup-overlay">
     <div class="popup-buttons">
     <button>I ate this today!</button>
@@ -362,6 +326,8 @@
 <li>Toast the pumpkin seeds in a dry frying pan. </li>
 <li>Uncover and fluff the couscous with a fork, stir in the lemon zest and juice, the roasted squash and 1/8 tablespoons of oil. Serve scattered with the pumpkin.</li>
   </ol>
+
+  <!-- Nutritional values and its associated visual representation are placed into a row container to display as a flexbox -->
 
     <h3> Nutrient Values</h3>
     <div class="nutritional-values">
@@ -409,7 +375,7 @@
   
   </div>
 
-
+<!-- Pop up content for the Salmon recipe -->
       <div id="salmon-popup" class="popup-overlay">
           <div class="popup-buttons">
           <button>I ate this today!</button>
@@ -491,6 +457,7 @@
       </div>
     </div>
         
+    <!-- Pop up content for Raspberry Slice recipe -->
       <div id="raspberry-popup" class="popup-overlay">
             <div class="popup-buttons">
             <button>I ate this today!</button>

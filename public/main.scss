@@ -2,13 +2,14 @@ body {
     margin:0;
 }
 
-@media screen and (max-width: 768px) 
-    /* For mobile phones: */
+// Change of design for mobile devices 
+@media only screen and (max-width: 768px) 
     {
     .day {
         width: 500px;
     }
       
+     // Recipe pop up buttons displayed in a single column instead of a row of 4
       .foods {
         flex-direction: column;
         align-items: center;
@@ -20,6 +21,7 @@ body {
         height: 300px;
     }
 
+     // Displaying the calendar in a row of 3,3 then 1 instead of 7
     #calendar {
         flex-wrap: nowrap;
     
@@ -31,15 +33,18 @@ body {
         margin: 2px;
     }
 
+    // Decreasing the size of the calorie tracker image for smaller devices
     .tracker {
         width: 100%;
-        max-width: 200px;
+        max-width: 300px;
 
     }
 
     .row-flower img {
         width: 80px;
     }
+
+     // Decreasing font sizes that it is appropriate and legible to all audiences on small devices
 
     h1 {
         font-size: 21pt;
@@ -82,19 +87,22 @@ body {
     }
 
 
-
-
+// Displaying the calorie progress bar as none as it does not work
 .progress-bar {
-    width: 100%;
+    width: 200px; 
+    height: 20px; 
     background-color: #F2D2BD;
- 
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: none;
 }
 
+// This represents the how the progress will move when users log their calories
 .progress {
     height: 100%;
-    background-color: #C1E1C1;
+    background-color:#C1E1C1;
     width: 0;
-    transition: width 0.3s;
+    transition: width 0.5s ease;
 }
 
 
@@ -107,29 +115,25 @@ body {
     
 }
 
-// .form {
-// //     display: flex;
-//     display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-// }
-
+// button for users setting their calorie goal, aligning it with the input form as a flex box and centering it to the middle of the page
 .setgoal {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.form-calories {
-    display: none;
-}
 
-.form input[type="number"] {
-    width: 100px;
+// .form-calories {
+//     display: none;
+// }
 
-}
+// .form input[type="number"] {
+//     width: 100px;
 
+// }
+
+
+// setting calorie goal buttons to align in the centre of the page, adding hover effects when user click
 .form button {
     justify-content: center;
     background-color:#C1E1C1;
@@ -145,12 +149,16 @@ body {
     font-weight: bold;
 }
 
-  
-  .green {
-    background-color: green;
-  }
-  
+.form-calories {
+    display:none;
+}
 
+  
+//   .green {
+//     background-color: green;
+//   }
+  
+// Font style is sans-serif for all text
 h1 {
     text-align: center;
     font-family: sans-serif;
@@ -220,43 +228,11 @@ h5 {
   margin-right: auto;
 }
 
-
-// img {
-//     display: block;
-//     margin: 0 auto;
-//     align-items: center;
-// }
-
-// .history {
-//     display: flex;
-// }
-
-
-// .history img{
-//     margin-left: auto;
-//     margin-right: 0;
-// }
-
-.progress-bar {
-    width: 200px; 
-    height: 20px; 
-    background-color: #F2D2BD;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    display: none;
-}
-
-.progress {
-    height: 100%;
-    background-color:#C1E1C1;
-    width: 0;
-    transition: width 0.5s ease;
-}
+// Displaying the calendar as a row of 7 using flexbox 
 
 #calendar {
     display: flex;
     flex-wrap: wrap;
-    // flex-direction: row;
     justify-content: center;
 }
 
@@ -276,7 +252,7 @@ h5 {
    
 }
 
-
+// Anything inside of a row contanier is presented in a row uing flexbox
 .row {
     display: flex;
     align-items: center; 
@@ -284,6 +260,7 @@ h5 {
     justify-content: center;
 }
 
+// Using flexbox to align the two leaves in a row
 .row-flower {
     display: flex;
 }
@@ -300,10 +277,12 @@ h5 {
     margin-right: 0;
 }
 
-.day {
-    width: 100px;
-}
 
+// .day {
+//     width: 100px;
+// }
+
+// This affects the done button in the "Meals of the day" pop up
 .formBox button {
     background-color: #C1E1C1;
     border-radius: 20px;
@@ -312,14 +291,18 @@ h5 {
     margin-left: auto;
 }
 
-.meal-entry {
-    width: 20px;
-    height: 20px;
-    background-color: #C1E1C1;
-    margin-left: 10px;
-    cursor: pointer;
-}
 
+
+// .meal-entry {
+//     width: 20px;
+//     height: 20px;
+//     background-color: #C1E1C1;
+//     margin-left: 10px;
+//     cursor: pointer;
+// }
+
+// Styling for the "Show Past History" pop up, background set to a nude colour with round, curved edges
+// Display: none is set so that the pop up doesn't open until user clicks the button
 #historycontent {
     background-color: #F2D2BD;
     padding: 5%;
@@ -328,10 +311,12 @@ h5 {
     display: none;
 }
 
+
 #historycontent h3{
     color: white
 }
 
+// History button set to the right of the page
 #history {
     float: right;
 }
@@ -341,18 +326,22 @@ h5 {
     border: none;
 }
 
+// Delete button in "Show Past History" pop up, however I do not know why the button still has a background and outline after they have been set to none
+
 .delete {
     background-color: transparent;
     border: none;
     width: 100px;
 }
 
+// Edit button in "Show Past History" pop up, same problem occuring with the background colour and border outline
 .edit {
     background-color: transparent;
     border: none;
     width: 100px;
 }
 
+// Container that contains both the edit and delete button in the "Show Past History" pop up. The goal is to position the buttons next to each other, on the right of the pop up
 .row-btn {
     margin-right: 0;
     margin-left: auto;
@@ -376,7 +365,8 @@ h5 {
 }
 
 
-
+// Pop ups for "Meals of the day" where users can add their meal and calories eaten
+// Display: none set to hide the content before users click the pop up button
 #card {
     background-color: #F2D2BD;
     padding: 5%;
@@ -385,13 +375,6 @@ h5 {
     display: none;
 }
 
-// #msg {
-//     display: none;
-// }
-
-// .msg {
-//     display: block;
-// }
 
 
 #card-title {
@@ -405,6 +388,7 @@ h5 {
 
 }
 
+// Container that contains all images and text that I want to present in a column for the nutritional values
 .column {
     float: left;
     width: 25%;
@@ -417,7 +401,7 @@ h5 {
     display: grid;
 }
 
-
+// Using flex box to position recipe buttons in a row
 .foods {
     display: flex;
     align-items: center;
@@ -446,6 +430,9 @@ button {
     cursor: pointer;
 }
 
+// The background colour for all recipe pop ups, styling of the border so that it is curved
+// Display: none set so that the content is not visible unless users click the recipe button
+
 .popup-overlay {
     display: none;
     justify-content: center;
@@ -461,7 +448,7 @@ button {
     color: white;
 }
 
-
+// All recipe pop ups are styled the same
 #pancake-popup {
     display: none;
     justify-content: center;
@@ -473,10 +460,6 @@ button {
     border-radius: 20px;
 }
 
-// .pancakeimg {
-//     display: block;
-//     width: 33%;
-// }
 
 #pancake-popup h3{
     background-color: #C1E1C1;
@@ -489,17 +472,14 @@ button {
     text-align:center;
 }
 
+// Styling the "I ate this today!" button to the right with a green background colour 
 #pancake-popup button {
     background-color: #C1E1C1;
     border-radius: 5px;
     margin-right:auto;
     margin-left:0;
 }
-// .close-button {
-//     position: absolute;
-//     cursor: pointer;
-//     justify-content: top-left;
-// }
+
 
 .nutrition-img {
     width: 50%;
@@ -541,11 +521,13 @@ button {
     text-align: center;
 }
 
+// Exit buttons set to the right of the recipe pop up container
 #exit {
     width:20px;
     margin: 0;
 }
 
+// Exit button for the "Meals of the day" pop up
 .exit {
     width:20px;
     float: right;

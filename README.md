@@ -165,9 +165,9 @@ The coding challenges that I was faced include:
 # **Guidance for Future Developers**
 
 Contribution to this project can be made by following brand guidelines of:
-•	Colour palette: white, #F2D2BD, #C1E1C1 and black green
-•	Font style: sans-serif 
-•	Concept: tracking calories and meals eating to promote healthy eating
+- Colour palette: white, #F2D2BD, #C1E1C1 and black green
+- Font style: sans-serif 
+- Concept: tracking calories and meals eating to promote healthy eating
 
 Further contribution by future developers can be through:
 1.	Familiarising themselves with the existing codebase, understanding the current code structures, conventions and functionalities.

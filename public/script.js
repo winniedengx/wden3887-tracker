@@ -1,4 +1,5 @@
 // Code for progress bar that allows users to set a weekly calorie goal and track their progress towards that goal by adding the number of calories they consume. The porgress is visually represented by updating the width of the progress bar element.
+// W3 Schools. (n.d). How TO- JavaScript Progress Bar. https://www.w3schools.com/howto/howto_js_progressbar.asp 
 var weeklyGoal;
 var totalCalories = 0;
 
@@ -25,6 +26,7 @@ function updateProgressBar() {
     document.getElementById("progress").style.width = progress + "%";
 }
 
+// EasyTutorials. (2022, March 9). How to Make A Popup Using HTML, CSS And Javascript|Create a Modal Box in HTML Website. https://www.google.com/search?q=how+to+make+a+pop+up+window+in+javascript&rlz=1C5CHFA_enAU1040AU1040&sxsrf=APwXEdeET9UQgATbdZwYEPFoQ4dP_VzG2w:1685588774950&source=lnms&tbm=vid&sa=X&ved=2ahUKEwiK_qvBi6H_AhXl7zgGHZEcDxoQ_AUoAXoECAEQAw&biw=1470&bih=808&dpr=2#fpstate=ive&vld=cid:935b28e3,vid:AF6vGYIyV8M 
 
 //Pop code for recipes start here
 // Opens a specific pop up window identitified by its ID
@@ -95,6 +97,7 @@ var history = document.getElementById("history");
 history.style.display = "flex";
 }
 
+// Griffith, S. (2019, February 5). Saving User Input in JS Objects. https://www.google.com/search?q=save+user+input+javascript&rlz=1C5CHFA_enAU1040AU1040&sxsrf=APwXEddyK4kSzstpkSRZ_stJ6zxgSgqTpQ:1685588818191&source=lnms&tbm=vid&sa=X&ved=2ahUKEwj8kPvVi6H_AhX7xTgGHbw-CF0Q_AUoAXoECAIQAw&biw=1470&bih=808&dpr=2#fpstate=ive&vld=cid:e8ff29fe,vid:NxVCq4p0Kb0 
 // This code allows users to add breakfast items to a list, which then gets displayed on the webpage inside the "Show Past History" pop up and saved to the browser's local storage for future retrieval
 let breakfasts = [];
 const addBreakfast = (ev)=>{
@@ -165,7 +168,7 @@ const addBreakfast = (ev)=>{
             viewHistory.innerHTML = lunches.value;
             viewHistory.innerHTML = dinners.value;
         }
-
+// NoorMaria. (2022, April 18). How to addEventListener to a button in popup content of ArcGIS API for JS. https://community.esri.com/t5/arcgis-javascript-maps-sdk-questions/how-to-addeventlistener-to-a-button-in-popup/td-p/1165242 
         // This code ensures that when the DOM has finished loading, the three functions will be executed in response to a click event.
 document.addEventListener('DOMContentLoaded', ()=> {
 document.getElementById('logmeal').addEventListener('click', addBreakfast);

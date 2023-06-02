@@ -23,38 +23,38 @@ A basic backend server needs to be set up using Node.js and Express:
 
 2)	In VS code use the command to stage the new file:
 
-git add test.html
+`git add test.html`
 
 3)	Commit changes and these files to the repository and start adding files 
 
-git add .
-git push
+`git add .`
+`git push`
 
 4)	Install Node.js by running the following command in the root directory of your git folder in the VS Code terminal
 
-npm init
+`npm init`
 
 5)	Create folder structures for a web app that includes server.js, index.html, style.css and script.js 
 
 6)	Add, commit and push changes to github using:
 
-initial commit
+`initial commit`
 
 7)	Use the VS Code terminal to run the following command in the root directory of your project folder: 
 
-npm install express
+`npm install express`
 
 8)	In the ‘server.js’ file, import the express package using the following code:
 
-const express = require(‘express’);
+`const express = require(‘express’);`
 
 9)	Initialise the express framework: 
 
-const app = express();
+`const app = express();`
 
 10)	Serve static files from the public folder: 
 
-app.use(express.static(‘public’));
+`app.use(express.static(‘public’));`
 
 11)	Serve the index file for the root (“/”) path:
 
@@ -70,7 +70,7 @@ console.log(“App server is running on port 8888”);
 
 13)	In the terminal, run the server using the command:
 
-node server.js
+`node server.js`
 
 14)	Add a new property in the ‘package.json’ file:
 
@@ -80,7 +80,7 @@ node server.js
 
 15)	Finally, start the web server by using the command:
 
-npm run start
+`npm run start`
 
 
 # **Development process**

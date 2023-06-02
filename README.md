@@ -156,11 +156,11 @@ Lastly, the final improvement can be seen in the typographic choices. From the f
 
 The coding challenges that I was faced include:
 
-•	Not being able to display a progress bar that increases when users enter the calorie intake. The progress bar has been hidden using display: none as I could not get the progress to work when I enter calories in a separate input field. To represent this feature of the application, I included the image of what the progress bar should look like when calories have been entered.
-•	Could not get users to view their past meals. To demonstrate this feature, the data that gets sent through when users log their meals (<pre></pre>) is presented in the “Show Past History” pop up. 
-•	Struggled with deleting meals users logged by clicking on the “delete” button in “Show Past History” pop up. I tried to mimic this feature by displaying the content as none when the button gets clicked on. 
-•	Could not style nutritional value text to align with the end of the visual bar 
-•	Had trouble centering the servings and time image in recipe pop ups
+- Not being able to display a progress bar that increases when users enter the calorie intake. The progress bar has been hidden using display: none as I could not get the progress to work when I enter calories in a separate input field. To represent this feature of the application, I included the image of what the progress bar should look like when calories have been entered.
+- Could not get users to view their past meals. To demonstrate this feature, the data that gets sent through when users log their meals (<pre></pre>) is presented in the “Show Past History” pop up. 
+- Struggled with deleting meals users logged by clicking on the “delete” button in “Show Past History” pop up. I tried to mimic this feature by displaying the content as none when the button gets clicked on. 
+- Could not style nutritional value text to align with the end of the visual bar 
+- Had trouble centering the servings and time image in recipe pop ups
 
 # **Guidance for Future Developers**
 

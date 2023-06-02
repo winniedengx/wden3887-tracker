@@ -45,14 +45,14 @@
 
 <!-- Since, the progress bar cannot actually work because calories are not logged, i have represented what it would look like through the image -->
 
-<img src="Images/Tracker.png" class="tracker"> 
+<img src="Images/Tracker.png" class="tracker" alt="Visual tracking progress bar"> 
 
   <section>
     <h1>Track your Healthy Eating</h1>
 
     <div class="row-flower">
-      <img src="Images/Leaf1.png" class="leaf-one">
-      <img src="Images/Leaf2.png" class="leaf-two">
+      <img src="Images/Leaf1.png" class="leaf-one" alt="leaf">
+      <img src="Images/Leaf2.png" class="leaf-two" alt="leaf">
       </div>
 
 
@@ -108,7 +108,7 @@
 <!-- Exiting the pop up button will be done by clicking the image-exit inside the div container -->
 <div id="historycontent" class="historycontent">
 <span class="close button" onclick="closehistoryPopUps()">
-  <img class="exit" src="Images/Exit.png"> </span>
+  <img class="exit" src="Images/Exit.png" alt="cross button"> </span>
 <h2 class="history-title"> Past History</h2>
 
 <!-- Including a delete and edit button using images -->
@@ -117,7 +117,7 @@
 <img src="Images/Delete.png" alt="View history icon" class="delete"> <br>
 </button>
 
-<button> <img src="Images/Edit.png" class="edit"> </button>
+<button> <img src="Images/Edit.png" class="edit" alt="Edit symbol"> </button>
 </div>
 
 <!-- Show user data that was entered in the meal add pop up -->
@@ -133,7 +133,7 @@
   <div id="card" class="container">
 <div class="card-content">
   <span class="close button" onclick="closecalenderPopUps()">
-    <img class="exit" src="Images/Exit.png"> </span>
+    <img class="exit" src="Images/Exit.png" alt="Exit symbol button"> </span>
   <h3 style="color:white"> <h2 class="meal-title">Meals of the Day </h2>
 
     <!-- using input fields retrieve data from users on the type of meal they had for breakfast, lunch and dinner -->
@@ -170,7 +170,7 @@
   <!-- Clicking on the done button sends the data entered by users to store in LocalStorage, displaying results in the "Show Past History" pop up as represented by <pre></pre> -->
   <div class="formBox">
     <div class="row">
-    <button id="logmeal"> <img class="done-button" src="Images/Done.png"></button>
+    <button id="logmeal"> <img class="done-button" src="Images/Done.png" alt="Tick symbol"></button>
   </div>
   </div>
 
@@ -219,7 +219,7 @@
         <div class="popup-buttons">
       <button>I ate this today!</button>
       <span class="close button" onclick="closePopUps()">
-        <img id="exit" src="Images/Exit.png"> </span>
+        <img id="exit" src="Images/Exit.png" alt="Exit symbol button"> </span>
        </div>
       <img src="Images/Banana Oat Pancakes.png" class= "recipe-img" style="max-width: 33%;">
       <h2 class="recipe-title"> Banana Oat <br> Pancakes</h2>
